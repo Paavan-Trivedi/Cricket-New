@@ -54,12 +54,14 @@ background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,
 
 
 #search{
+    margin-top: 30px;
     margin-left: 380px;
     padding: 1px 20px;
     border-radius: 10px;
     height: 35px;
     width: 350px;
     background-color: #2F293E;
+    color: white;
     
 }
 
@@ -100,7 +102,7 @@ background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,
     width: auto;
     /* border: 2px solid black; */
     margin-left: 30px;
-    backdrop-filter: blur(100px);
+    /* backdrop-filter: blur(100px); */
 
     display: flex;
 }
@@ -177,6 +179,10 @@ background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,
 .ranking-table{
     height: 620px;
     width: 320px;
+    position: absolute;
+    right: 30px;
+    
+    overflow: hidden;
     /* border: 2px solid black; */
     background: grey;
 box-shadow: 0px 10.69333px 10.69333px 0px rgba(0, 0, 0, 0.25);
@@ -274,4 +280,11 @@ box-shadow: 0px 10.69333px 10.69333px 0px rgba(0, 0, 0, 0.25);
 
 .Playersearch{
     display: flex;
+}
+
+.Btn{
+    height: 30px;
+    width: 70px;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #C04848 0%, #480048 51%, #C04848 100%);
 }
