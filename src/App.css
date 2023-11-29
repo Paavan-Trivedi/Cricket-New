@@ -187,8 +187,9 @@ body {
 .ranking-table {
     height: 620px;
     width: 320px;
-    position: absolute;
-    right: 30px;
+    /* position: fixed;
+    display: block;
+    right: 30px; */
 
     overflow: hidden;
     /* border: 2px solid black; */
@@ -234,6 +235,7 @@ body {
     background-color: #AA076B;
     border-radius: 10px;
     margin-left: 30px;
+    cursor: pointer;
 }
 
 .players ul li img {
@@ -299,4 +301,5 @@ body {
     background-image: linear-gradient(to right, #C04848 0%, #480048 51%, #C04848 100%);
     color: white;
     margin-left: 50px;
+    cursor: pointer;
 }
