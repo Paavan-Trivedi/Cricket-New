@@ -17,7 +17,7 @@ export default function Home() {
       image: 'New Zealand.png',
       description:
         'The New Zealand cricket team, known as the Blackcaps, exhibits skill, resilience, and sportsmanship globally.',
-      link: 'New Zealand',
+      link: 'Newzealand',
     },
     {
       name: 'Australia',
@@ -38,14 +38,14 @@ export default function Home() {
       image: 'South Africa.jpg',
       description:
         'The South Africa cricket team, Proteas, blends talent, resilience, and diversity, symbolizing cricket prowess internationally.',
-      link: 'South Africa',
+      link: 'SouthAfrica',
     },
     {
       name: 'West Indies',
       image: 'West Indies.jpg',
       description:
         'The West Indies cricket team, a vibrant blend of flair and power, has a legendary cricketing legacy.',
-      link: 'West Indies',
+      link: 'WestIndies',
     },
     {
       name: 'Ireland',
@@ -106,6 +106,9 @@ export default function Home() {
               }
               else if (val.name.toLowerCase().includes(search.toLowerCase())) {
                 return val;
+              }
+              else if(search != val.name){ 
+                "player not found"
               }
 
             }).map((team, index) => (
