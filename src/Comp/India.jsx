@@ -5,49 +5,49 @@ import { NavLink } from "react-router-dom";
 export default function India() {
 
   const [search, setSearch] = useState("")
-  
+
 
   return (
     <>
-    <div className="Playersearch">
-            <input
-              type="search"
-              name="search"
-              id="Playersearch"
-              placeholder="search"
-              onChange={(event)=>{setSearch(event.target.value)}}
-            />
-          </div>
-          <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink> 
-          <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink> 
-         <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>      
+      <div className="Playersearch">
+        <input
+          type="search"
+          name="search"
+          id="Playersearch"
+          placeholder="search"
+          onChange={(event) => { setSearch(event.target.value) }}
+        />
+      </div>
+      <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink>
+      <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink>
+      <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>
 
       <div className="players">
-        {Players.filter((val)=>{
+        {Players.filter((val) => {
           if (search == '') {
             return val
           }
-          else if(val.player_name.toLowerCase().includes(search.toLowerCase())){
+          else if (val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
-          
+
         })
-        .map((player) => {
-          return (
-            <ul>
-              <div className="playerdets">
-                <li className="playername">{player.player_name}</li>
-                <li className="playerimg">
-                  <img src="India.png" alt="" />
-                </li>
-              </div>
-              <div className="playerslist">
-                <li>Age: {player.player_age}</li>
-                <li>{player.Gender}</li>
-              </div>
-            </ul>
-          );
-        })}
+          .map((player) => {
+            return (
+              <ul>
+                <div className="playerdets">
+                  <li className="playername">{player.player_name}</li>
+                  <li className="playerimg">
+                    <img src="India.png" alt="" />
+                  </li>
+                </div>
+                <div className="playerslist">
+                  <li>Age: {player.player_age}</li>
+                  <li>{player.Gender}</li>
+                </div>
+              </ul>
+            );
+          })}
       </div>
     </>
   );
@@ -55,98 +55,98 @@ export default function India() {
 
 export function Male() {
   const [search, setSearch] = useState("")
-  return(
+  return (
     <>
-       <div className="Playersearch">
-            <input
-              type="search"
-              name="search"
-              id="Playersearch"
-              placeholder="search"
-              onChange={(event)=>{setSearch(event.target.value)}}
-            />
-          </div>
-          <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink> 
-          <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink> 
-         <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>
-     <div className="players">
-        {Players.filter((val)=>{
-          if ( val.Gender=="Male" && search == '') {
+      <div className="Playersearch">
+        <input
+          type="search"
+          name="search"
+          id="Playersearch"
+          placeholder="search"
+          onChange={(event) => { setSearch(event.target.value) }}
+        />
+      </div>
+      <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink>
+      <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink>
+      <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>
+      <div className="players">
+        {Players.filter((val) => {
+          if (val.Gender == "Male" && search == '') {
             return val
           }
-          else if(val.Gender=="Male" && val.player_name.toLowerCase().includes(search.toLowerCase())){
+          else if (val.Gender == "Male" && val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
-          
+
         })
-        .map((player) => {
-          return (
-            <ul>
-              <div className="playerdets">
-                <li className="playername">{player.player_name}</li>
-                <li className="playerimg">
-                  <img src="India.png" alt="" />
-                </li>
-              </div>
-              <div className="playerslist">
-                <li>Age: {player.player_age}</li>
-                <li>{player.Gender}</li>
-              </div>
-            </ul>
-          );
-        })}
+          .map((player) => {
+            return (
+              <ul>
+                <div className="playerdets">
+                  <li className="playername">{player.player_name}</li>
+                  <li className="playerimg">
+                    <img src="India.png" alt="" />
+                  </li>
+                </div>
+                <div className="playerslist">
+                  <li>Age: {player.player_age}</li>
+                  <li>{player.Gender}</li>
+                </div>
+              </ul>
+            );
+          })}
       </div>
     </>
-  
-    
-    )
+
+
+  )
 }
 
 export function Female() {
   const [search, setSearch] = useState("")
-  return(
+  return (
     <>
-       <div className="Playersearch">
-            <input
-              type="search"
-              name="search"
-              id="Playersearch"
-              placeholder="search"
-              onChange={(event)=>{setSearch(event.target.value)}}
-            />
-          </div>
-          <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink> 
-          <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink> 
-         <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>
-     <div className="players">
-        {Players.filter((val)=>{
-          if ( val.Gender=="female" && search == '') {
+      <div className="Playersearch">
+        <input
+          type="search"
+          name="search"
+          id="Playersearch"
+          placeholder="search"
+          onChange={(event) => { setSearch(event.target.value) }}
+        />
+      </div>
+      <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink>
+      <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink>
+      <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>
+      <div className="players">
+        {Players.filter((val) => {
+          if (val.Gender == "female" && search == '') {
             return val
           }
-          else if(val.Gender=="female" && val.player_name.toLowerCase().includes(search.toLowerCase())){
+          else if (val.Gender == "female" && val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
-          
+
         })
-        .map((player) => {
-          return (
-            <ul>
-              <div className="playerdets">
-                <li className="playername">{player.player_name}</li>
-                <li className="playerimg">
-                  <img src="India.png" alt="" />
-                </li>
-              </div>
-              <div className="playerslist">
-                <li>Age: {player.player_age}</li>
-                <li>{player.Gender}</li>
-              </div>
-            </ul>
-          );
-        })}
+          .map((player) => {
+            return (
+              <ul>
+                <div className="playerdets">
+                  <li className="playername">{player.player_name}</li>
+                  <li className="playerimg">
+                    <img src="India.png" alt="" />
+                  </li>
+                </div>
+                <div className="playerslist">
+                  <li>Age: {player.player_age}</li>
+                  <li>{player.Gender}</li>
+                </div>
+              </ul>
+            );
+          })}
       </div>
     </>
-  
-    
-    )
+
+
+  )
 }

@@ -89,40 +89,40 @@ export default function Home() {
 
   return (
     <>
-    <Navbar/>
-    <input
-              type="search"
-              name="search"
-              id="search"
-              placeholder="search"
-              onChange={(event)=>{setSearch(event.target.value)}}
-            />
-    <div className="view">
-      <div className="card">
-        <div className="cards">
-          {teams.filter((val)=>{
-          if ( search == '') {
-            return val
-          }
-          else if(val.name.toLowerCase().includes(search.toLowerCase())){
-            return val;
-          }
-          
-        }).map((team, index) => (
-            <NavLink className="Indiateam" to={team.link} key={index}>
-              <div className="card-box">
-                <img style={{ width: '200px', height: '120px' }} src={team.image} alt="" />
-                <div className="intro">
-                  <h1>{team.name}</h1>
-                  <p>{team.description}</p>
+      <Navbar />
+      <input
+        type="search"
+        name="search"
+        id="search"
+        placeholder="search"
+        onChange={(event) => { setSearch(event.target.value) }}
+      />
+      <div className="view">
+        <div className="card">
+          <div className="cards">
+            {teams.filter((val) => {
+              if (search == '') {
+                return val
+              }
+              else if (val.name.toLowerCase().includes(search.toLowerCase())) {
+                return val;
+              }
+
+            }).map((team, index) => (
+              <NavLink className="Indiateam" to={team.link} key={index}>
+                <div className="card-box">
+                  <img style={{ width: '200px', height: '120px' }} src={team.image} alt="" />
+                  <div className="intro">
+                    <h1>{team.name}</h1>
+                    <p>{team.description}</p>
+                  </div>
                 </div>
-              </div>
-            </NavLink>
-          ))}
+              </NavLink>
+            ))}
+          </div>
         </div>
+        <div className="ranking-table">Ranking Table</div>
       </div>
-      <div className="ranking-table">Ranking Table</div>
-    </div>
     </>
   );
 };
