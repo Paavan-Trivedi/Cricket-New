@@ -1,0 +1,492 @@
+[
+    {
+        "player_name": "Kanika Ahuja",
+        "player_age": " 21y 115d",
+        "player_image": "https://wassets.hscicdn.com/static/images/player-jersey.svg",
+        "Gender": "female",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Anjali Sarvani",
+        "player_age": " 26y 94d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/353900/353965.4.jpg",
+        "Gender": "female",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Bareddy Anusha",
+        "player_age": " 20y 177d",
+        "player_image": "https://wassets.hscicdn.com/static/images/player-jersey.svg",
+        "Gender": "female",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Arshdeep Singh",
+        "player_age": " 24y 298d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/356700/356795.1.png",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Ravichandran Ashwin",
+        "player_age": " 37y 74d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/302300/302395.jpg",
+        "Gender": "Male",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Avesh Khan",
+        "player_age": " 26y 352d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/200000/200065.1.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Srikar Bharat",
+        "player_age": " 30y 58d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/314800/314851.png",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Yastika Bhatia",
+        "player_age": " 23y 29d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/329300/329353.4.jpg",
+        "Gender": "female",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Jasprit Bumrah",
+        "player_age": " 29y 359d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/356800/356849.1.png",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Yuzvendra Chahal",
+        "player_age": " 33y 130d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/312100/312155.png",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Deepak Chahar",
+        "player_age": " 31y 115d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/315000/315014.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Harleen Deol",
+        "player_age": " 25y 162d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/329300/329348.5.jpg",
+        "Gender": "female",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Shikhar Dhawan",
+        "player_age": " 37y 360d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/302300/302373.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Shivam Dube",
+        "player_age": " 30y 157d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/356700/356768.1.png",
+        "Gender": "Male",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Ruturaj Gaikwad",
+        "player_age": " 26y 303d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/356700/356779.1.png",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Rajeshwari Gayakwad",
+        "player_age": " 32y 182d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304400/304473.png",
+        "Gender": "female",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Richa Ghosh",
+        "player_age": " 20y 63d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304500/304552.png",
+        "Gender": "female",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Deepak Hooda",
+        "player_age": " 28y 225d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/343200/343251.4.jpg",
+        "Gender": "Male",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Ishan Kishan",
+        "player_age": " 25y 135d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/329300/329345.4.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Shreyas Iyer",
+        "player_age": " 28y 359d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/309100/309198.1.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Ravindra Jadeja",
+        "player_age": " 34y 359d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/302300/302394.jpg",
+        "Gender": "Male",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Yashasvi Jaiswal",
+        "player_age": " 21y 337d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/356800/356803.1.png",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Rashi Kanojiya",
+        "player_age": " 25y 224d",
+        "player_image": "https://wassets.hscicdn.com/static/images/player-jersey.svg",
+        "Gender": "female",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Amanjot Kaur",
+        "player_age": " 23y 333d",
+        "player_image": "https://wassets.hscicdn.com/static/images/player-jersey.svg",
+        "Gender": "female",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Harmanpreet Kaur",
+        "player_age": " 34y 267d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304400/304466.png",
+        "Gender": "female",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Virat Kohli",
+        "player_age": " 35y 25d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/289000/289002.1.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Kuldeep Yadav",
+        "player_age": " 28y 351d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304200/304208.png",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Smriti Mandhana",
+        "player_age": " 27y 135d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304500/304569.png",
+        "Gender": "female",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Minnu Mani",
+        "player_age": " 24y 251d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/365700/365717.1.png",
+        "Gender": "female",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Meghna Singh",
+        "player_age": " 29y 165d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/329300/329350.4.jpg",
+        "Gender": "female",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Mohammed Shami",
+        "player_age": " 33y 88d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304200/304210.png",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Mohammed Siraj",
+        "player_age": " 29y 262d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/315600/315604.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Mukesh Kumar",
+        "player_age": " 30y 49d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/364900/364946.4.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Shikha Pandey",
+        "player_age": " 34y 202d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304500/304564.png",
+        "Gender": "female",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Hardik Pandya",
+        "player_age": " 30y 50d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304200/304201.png",
+        "Gender": "Male",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Rishabh Pant",
+        "player_age": " 26y 57d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304200/304221.png",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Axar Patel",
+        "player_age": " 29y 314d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/329300/329344.4.jpg",
+        "Gender": "Male",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Harshal Patel",
+        "player_age": " 33y 7d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/309100/309102.png",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Prasidh Krishna",
+        "player_age": " 27y 284d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/356800/356808.1.png",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Cheteshwar Pujara",
+        "player_age": " 35y 309d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/295200/295261.1.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Priya Punia",
+        "player_age": " 27y 116d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/324700/324715.4.jpg",
+        "Gender": "female",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Ajinkya Rahane",
+        "player_age": " 35y 177d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/312100/312159.png",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "KL Rahul",
+        "player_age": " 31y 226d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304200/304207.png",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Sneh Rana",
+        "player_age": " 29y 285d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/323300/323312.15.jpg",
+        "Gender": "female",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Ravi Bishnoi",
+        "player_age": " 23y 86d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/335000/335051.4.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Renuka Singh",
+        "player_age": " 27y 332d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/329300/329351.5.jpg",
+        "Gender": "female",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Jemimah Rodrigues",
+        "player_age": " 23y 86d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/300600/300608.1.jpg",
+        "Gender": "female",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Titas Sadhu",
+        "player_age": " 19y 62d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/352900/352943.4.jpg",
+        "Gender": "female",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Sai Kishore",
+        "player_age": " 27y 24d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/362500/362558.4.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Sanju Samson",
+        "player_age": " 29y 19d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/318800/318843.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Kuldeep Sen",
+        "player_age": " 27y 39d",
+        "player_image": "https://wassets.hscicdn.com/static/images/player-jersey.svg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Shafali Verma",
+        "player_age": " 19y 306d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304500/304562.png",
+        "Gender": "female",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Shahbaz Ahmed",
+        "player_age": " 28y 354d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/308600/308627.1.jpg",
+        "Gender": "Male",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Deepti Sharma",
+        "player_age": " 26y 98d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304400/304461.png",
+        "Gender": "female",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Jitesh Sharma",
+        "player_age": " 30y 39d",
+        "player_image": "https://wassets.hscicdn.com/static/images/player-jersey.svg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Rohit Sharma",
+        "player_age": " 36y 214d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/302300/302374.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Shivam Mavi",
+        "player_age": " 25y 4d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/338100/338173.4.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Shubman Gill",
+        "player_age": " 24y 83d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/312100/312153.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Rinku Singh",
+        "player_age": " 26y 49d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/338100/338171.4.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Shardul Thakur",
+        "player_age": " 32y 45d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/302300/302372.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Tilak Varma",
+        "player_age": " 21y 22d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/314700/314790.jpg",
+        "Gender": "Male",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Rahul Tripathi",
+        "player_age": " 32y 273d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/356800/356821.1.png",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Umran Malik",
+        "player_age": " 24y 8d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/356800/356816.1.png",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Jaydev Unadkat",
+        "player_age": " 32y 43d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/302300/302392.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Devika Vaidya",
+        "player_age": " 26y 109d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/353900/353967.4.jpg",
+        "Gender": "female",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Pooja Vastrakar",
+        "player_age": " 24y 66d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/300600/300610.1.jpg",
+        "Gender": "female",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Washington Sundar",
+        "player_age": " 24y 56d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/362600/362608.1.png",
+        "Gender": "Male",
+        "Playing_role": "Allrounder"
+    },
+    {
+        "player_name": "Radha Yadav",
+        "player_age": " 23y 223d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/304500/304548.png",
+        "Gender": "female",
+        "Playing_role": "Bowler"
+    },
+    {
+        "player_name": "Suryakumar Yadav",
+        "player_age": " 33y 77d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/329300/329343.4.jpg",
+        "Gender": "Male",
+        "Playing_role": "Batter"
+    },
+    {
+        "player_name": "Umesh Yadav",
+        "player_age": " 36y 36d",
+        "player_image": "https://img1.hscicdn.com/image/upload/f_auto,t_h_100_2x/lsci/db/PICTURES/CMS/302300/302396.jpg",
+        "Gender": "Male",
+        "Playing_role": "Bowler"
+    }
+]
