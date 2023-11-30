@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
 import Navbar from "./Navbar";
 
 export default function Home() {
@@ -108,10 +107,6 @@ export default function Home() {
               else if (val.name.toLowerCase().includes(search.toLowerCase())) {
                 return val;
               }
-              else if(search != val.name){ 
-                "player not found"
-              }
-
             }).map((team, index) => (
               <NavLink className="Indiateam" to={team.link} key={index}>
                 <div className="card-box">
