@@ -11,6 +11,8 @@ export default function Navbar() {
           <li  >
             <h1 >Cric-Info</h1>
           </li>
+          <li><button>Signup</button></li>
+          <li><button>Login</button></li>
         </ul>
       </nav>
     </>
