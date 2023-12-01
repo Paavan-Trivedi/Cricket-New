@@ -70,3 +70,8 @@ input {
   border-radius: 5px;
   cursor: pointer;
 }
+.login-eye{
+  position: absolute;
+  top: 16.7rem;
+  right: 3rem;
+}

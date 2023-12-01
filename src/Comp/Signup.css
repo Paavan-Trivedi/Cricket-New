@@ -70,3 +70,9 @@ input {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.signup-eye{
+  position: absolute;
+  top: 23.4rem;
+  right: 3rem;
+}
