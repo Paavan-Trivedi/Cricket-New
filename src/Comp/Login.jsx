@@ -6,22 +6,6 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
 
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
-
-  function changeHandler(event) {
-    setFormData([
-      (prev) => [
-        {
-          ...prev,
-          [event.target.name]: event.target.value,
-        },
-      ],
-    ]);
-  }
-
   const Loginsubmit = (e) => {
     e.preventDefault();
   };
@@ -32,21 +16,13 @@ export default function Login() {
         <h3>Login Here</h3>
 
         <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          placeholder="Email or Name"
-          id="username"
-          value={formData.username}
-          onChange={changeHandler}
-        />
+        <input type="text" placeholder="Email or Name" id="username" />
 
         <label htmlFor="password">Password</label>
         <input
           type={showPassword ? "text" : "password"}
           placeholder="Password"
           id="password"
-          value={formData.password}
-          onChange={changeHandler}
         />
         <span
           onClick={() => setShowPassword(!showPassword)}
@@ -55,7 +31,7 @@ export default function Login() {
           {showPassword ? (
             <AiOutlineEye fontSize={24} fill="#AFB2BF" />
           ) : (
-            < AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
+            <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
           )}
         </span>
 
