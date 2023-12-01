@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Players from "./india-6_player.json";
+import Players from "../india-6_player.json";
 import { NavLink } from "react-router-dom";
 
 export default function India() {
