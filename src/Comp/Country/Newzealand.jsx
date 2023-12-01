@@ -33,7 +33,7 @@ export default function India() {
           onChange={(event) => { setSearch(event.target.value) }}
         />
       </div>
-      <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink>
+      <NavLink to={"/Newzealand"} ><button className="Btn" >All</button> </NavLink>
       <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink>
       <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>
 
