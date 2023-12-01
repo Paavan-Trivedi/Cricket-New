@@ -12,7 +12,6 @@ export default function Signup() {
     e.preventDefault();
     console.log(username);
     console.log(password);
-    console.log(email);
   };
 
   return (
