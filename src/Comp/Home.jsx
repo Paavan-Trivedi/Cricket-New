@@ -42,7 +42,7 @@ export default function Home() {
     },
     {
       name: 'West Indies',
-      image: 'Westindies.jpg',
+      image: 'West Indies.jpg',
       description:
         'The West Indies cricket team, a vibrant blend of flair and power, has a legendary cricketing legacy.',
       link: 'WestIndies',
