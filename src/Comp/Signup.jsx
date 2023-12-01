@@ -7,8 +7,6 @@ export default function Signup() {
 
   const Signupsubmit = (e) => {
     e.preventDefault();
-    console.log(username);
-    console.log(password);
   };
   return (
     <div>
