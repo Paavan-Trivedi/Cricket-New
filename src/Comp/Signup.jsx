@@ -3,46 +3,28 @@ import "./Signup.css";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
 export default function Signup() {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const Signupsubmit = async (e) => {
+  const Signupsubmit = (e) => {
     e.preventDefault();
-  
   };
-
   return (
     <div>
       <form className="Signup-form" onSubmit={Signupsubmit}>
         <h3>Signup Here</h3>
 
         <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          placeholder="Name"
-          id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+        <input type="text" placeholder="Name" name="username" id="username" />
 
         <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          placeholder="Email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <input type="email" placeholder="Email" name="email" id="email" />
 
         <label htmlFor="password">Password</label>
         <input
           type={showPassword ? "text" : "password"}
           placeholder="Password"
+          name="password"
           id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
         />
 
         <span
