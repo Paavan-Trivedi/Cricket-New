@@ -14,15 +14,16 @@ export default function Signup() {
         <h3>Signup Here</h3>
 
         <label htmlFor="username">Username</label>
-        <input type="text" placeholder="Name" id="username" />
+        <input type="text" placeholder="Name" name="username" id="username" />
 
         <label htmlFor="email">Email</label>
-        <input type="email" placeholder="Email" id="email" />
+        <input type="email" placeholder="Email" name="email" id="email" />
 
         <label htmlFor="password">Password</label>
         <input
           type={showPassword ? "text" : "password"}
           placeholder="Password"
+          name="password"
           id="password"
         />
 

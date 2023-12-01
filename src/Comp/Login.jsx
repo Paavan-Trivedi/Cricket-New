@@ -16,13 +16,14 @@ export default function Login() {
         <h3>Login Here</h3>
 
         <label htmlFor="username">Username</label>
-        <input type="text" placeholder="Email or Name" id="username" />
+        <input type="text" name="username" placeholder="Email or Name" id="username" />
 
         <label htmlFor="password">Password</label>
         <input
           type={showPassword ? "text" : "password"}
           placeholder="Password"
           id="password"
+          name="password"
         />
         <span
           onClick={() => setShowPassword(!showPassword)}
