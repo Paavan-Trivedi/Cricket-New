@@ -8,6 +8,7 @@ export default function Login() {
 
   const Loginsubmit = (e) => {
     e.preventDefault();
+    console.log("first")
   };
 
   return (
