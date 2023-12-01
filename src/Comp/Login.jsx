@@ -4,13 +4,11 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const Loginsubmit = (e) => {
     e.preventDefault();
-    console.log(username, password);
+    console.log("first")
   };
 
   return (
@@ -19,21 +17,14 @@ export default function Login() {
         <h3>Login Here</h3>
 
         <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          placeholder="Email or Name"
-          id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+        <input type="text" name="username" placeholder="Email or Name" id="username" />
 
         <label htmlFor="password">Password</label>
         <input
           type={showPassword ? "text" : "password"}
           placeholder="Password"
           id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          name="password"
         />
         <span
           onClick={() => setShowPassword(!showPassword)}
