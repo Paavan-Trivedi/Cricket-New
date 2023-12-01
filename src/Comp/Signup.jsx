@@ -11,6 +11,8 @@ export default function Signup() {
   const Signupsubmit = async (e) => {
     e.preventDefault();
     console.log(username);
+    console.log(password);
+    console.log(email);
   };
 
   return (
