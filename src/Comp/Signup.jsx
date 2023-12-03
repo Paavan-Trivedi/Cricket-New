@@ -74,7 +74,7 @@ export default function Signup() {
           )}
         </span>
 
-        <button className="signup-button" onClick={addData}><NavLink to="/login">Signup</NavLink></button>
+        <NavLink to="/login"> <button className="signup-button" onClick={addData}>Signup</button></NavLink>
       </form>
     </div>
   );
