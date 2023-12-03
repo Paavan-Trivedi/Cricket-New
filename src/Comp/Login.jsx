@@ -8,8 +8,7 @@ export default function Login() {
 
   const Loginsubmit = (e) => {
     e.preventDefault();
-    console.log("hi");
-    console.log("hello");
+    
   };
 
   return (
