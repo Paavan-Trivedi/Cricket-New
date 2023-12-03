@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Signup.css";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -73,7 +74,7 @@ export default function Signup() {
           )}
         </span>
 
-        <button className="signup-button" onClick={addData}>Signup</button>
+        <NavLink to="/login"> <button className="signup-button" onClick={addData}>Signup</button></NavLink>
       </form>
     </div>
   );
