@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import "./Signup.css";
-// import axios from "axios";
+import axios from "axios";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-
-// axios.defaults.xsrfCookieName = 'csrftoken';
-// axios.defaults.xsrfHeaderName  = 'X-CSRFToken';
-// axios.defaults.withCredentials = true;
-
-// const client = axios.create({
-//   baseURL: "http://192.168.29.84:8000"
-// });
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -20,22 +12,47 @@ export default function Signup() {
   const [register, setRegister] = useState(false);
   const navigate = useNavigate();
 
-  const submitHandler = async () => {
-    await fetch("http://192.168.29.84:8000/api/register/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        username: name,
-        email,
-        password,
-      }),
-    });
-    setRegister(true);
-    navigate("/login");
+  const submitHandler = () => {
+    axios
+      .post(
+        "http://192.168.29.84:8000/api/login/",
+        {
+          username: name,
+          Email: email,
+          password: password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      )
+      .then(() => {
+        setRegister(true);
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.error("Error occurred:", error);
+      });
   };
+
+  // const submitHandler = async () => {
+  //   await fetch("http://192.168.29.84:8000/api/register/", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       username: name,
+  //       email,
+  //       password,
+  //     }),
+  //   });
+  //   setRegister(true);
+  //   navigate("/login");
+  // };
 
   return (
     <div>
