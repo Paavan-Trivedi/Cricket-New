@@ -1,65 +1,79 @@
 import React, { useState } from "react";
 import "./Signup.css";
+import axios from "axios";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
+axios.defaults.xsrfCookieName = 'csrftoken';
+axios.defaults.xsrfHeaderName  = 'X-CSRFToken';
+axios.defaults.withCredentials = true;
+
+const client = axios.create({
+  baseURL: "http://192.168.29.84:8000"
+});
+
 export default function Signup() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const [inpval, setInpval] = useState({
-    username: '',
-    email: "",
-    password: ""
-  })
-
-  const [data, setData] = useState([])
-
-  const getdata = (e) => {
-    const { value, name } = e.target;
-
-    setInpval(() => {
-      return {
-        ...inpval,
-        [name]: value
-      }
-    })
-  }
-
-  const addData = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
 
-    const { username, email, password } = inpval;
-
-    if (username == '') {
-      alert("name filed is required")
-    } else if (email == '') {
-      alert("email filed is required")
-    } else if (!email.includes("@")) {
-      alert("plz enter valid email address")
-    } else if (password == "") {
-      alert("password filed is required")
-    } else {
-      localStorage.setItem("user", JSON.stringify([...data, inpval]))
-    }
-  }
+    client.post(
+      "/api/register",
+      {
+        email: email,
+        username: name,
+        password: password
+      }
+    ).then(function(res) {
+      client.post(
+        "/api/login",
+        {
+          email: email,
+          password: password
+        }
+      ).then(function(res) {
+        setCurrentUser(true);
+      });
+    });
+    
+  };
 
   return (
     <div>
-      <form className="Signup-form">
+      <form className="Signup-form" onSubmit={submitHandler}>
         <h3>Signup Here</h3>
 
         <label htmlFor="username">Username</label>
-        <input type="text" placeholder="Name" onChange={getdata} name="username" id="username" />
+        <input
+          type="text"
+          placeholder="Name"
+          id="username"
+          value={name}
+          required
+          onChange={(e) => setName(e.target.value)}
+        />
 
         <label htmlFor="email">Email</label>
-        <input type="email" placeholder="Email" onChange={getdata} name="email" id="email" />
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          value={email}
+          required
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
         <label htmlFor="password">Password</label>
         <input
           type={showPassword ? "text" : "password"}
           placeholder="Password"
-          name="password"
-          onChange={getdata}
           id="password"
+          value={password}
+          required
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         <span
@@ -73,7 +87,7 @@ export default function Signup() {
           )}
         </span>
 
-        <button className="signup-button" onClick={addData}>Signup</button>
+        <button className="signup-button">Signup</button>
       </form>
     </div>
   );
