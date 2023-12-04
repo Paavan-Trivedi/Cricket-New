@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Signup.css";
 // import axios from "axios";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 // axios.defaults.xsrfCookieName = 'csrftoken';
 // axios.defaults.xsrfHeaderName  = 'X-CSRFToken';
@@ -16,9 +17,10 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [register, setRegister] = useState(false);
+  const navigate = useNavigate();
 
   const submitHandler = async () => {
-
     await fetch("http://192.168.29.84:8000/api/register/", {
       method: "POST",
       headers: {
@@ -30,8 +32,9 @@ export default function Signup() {
         email,
         password,
       }),
-
     });
+    setRegister(true);
+    navigate("/login");
   };
 
   return (

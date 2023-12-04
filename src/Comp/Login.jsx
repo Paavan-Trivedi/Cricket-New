@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import "./Login.css";
 import { NavLink } from "react-router-dom";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [register, setRegister] = useState(false);
+  const navigate = useNavigate();
 
   const submitHandler = async () => {
-
     await fetch("http://192.168.29.84:8000/api/login/", {
       method: "POST",
       headers: {
@@ -18,17 +20,15 @@ export default function Login() {
       },
       body: JSON.stringify({
         username: name,
-        password : password,
+        password: password,
       }),
-
     });
-
+    setRegister(true);
+    navigate("/");
   };
 
-
-
   return (
-    <div> 
+    <div>
       <div className="Login-form">
         <h3>Login Here</h3>
 
@@ -62,11 +62,20 @@ export default function Login() {
           )}
         </span>
 
-        <button type="submit" className="login-button" onClick={(e) => submitHandler(e)}>Log In</button>
+        <button
+          type="submit"
+          className="login-button"
+          onClick={(e) => submitHandler(e)}
+        >
+          Log In
+        </button>
         <br />
         <br />
         <p>
-          not have an account? <NavLink to={"/signup"} className="link">Signup</NavLink>
+          not have an account?{" "}
+          <NavLink to={"/signup"} className="link">
+            Signup
+          </NavLink>
         </p>
       </div>
     </div>
