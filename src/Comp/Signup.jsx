@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./Signup.css";
-import axios from "axios";
+// import axios from "axios";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
-axios.defaults.xsrfCookieName = 'csrftoken';
-axios.defaults.xsrfHeaderName  = 'X-CSRFToken';
-axios.defaults.withCredentials = true;
+// axios.defaults.xsrfCookieName = 'csrftoken';
+// axios.defaults.xsrfHeaderName  = 'X-CSRFToken';
+// axios.defaults.withCredentials = true;
 
-const client = axios.create({
-  baseURL: "http://192.168.29.84:8000"
-});
+// const client = axios.create({
+//   baseURL: "http://192.168.29.84:8000"
+// });
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -17,34 +17,27 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
+  const submitHandler = async () => {
 
-    client.post(
-      "/api/register",
-      {
-        email: email,
+    await fetch("http://192.168.29.84:8000/api/register/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
         username: name,
-        password: password
-      }
-    ).then(function(res) {
-      client.post(
-        "/api/login",
-        {
-          email: email,
-          password: password
-        }
-      ).then(function(res) {
-        setCurrentUser(true);
-      });
+        email,
+        password,
+      }),
+
     });
-    
   };
 
   return (
     <div>
-      <form className="Signup-form" onSubmit={submitHandler}>
-        <h3>Signup Here</h3>
+      <div className="Signup-form">
+        <h3 className="heading">Signup Here</h3>
 
         <label htmlFor="username">Username</label>
         <input
@@ -87,8 +80,14 @@ export default function Signup() {
           )}
         </span>
 
-        <button className="signup-button">Signup</button>
-      </form>
+        <button
+          type="submit"
+          onClick={(e) => submitHandler(e)}
+          className="signup-button"
+        >
+          Signup
+        </button>
+      </div>
     </div>
   );
 }

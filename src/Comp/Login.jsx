@@ -8,15 +8,28 @@ export default function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
-  const LoginSubmit = async (e) => {
-    e.preventDefault();
+  const submitHandler = async () => {
 
-  
+    await fetch("http://192.168.29.84:8000/api/login/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        username: name,
+        password : password,
+      }),
+
+    });
+
   };
 
+
+
   return (
-    <div>
-      <form className="Login-form" onSubmit={LoginSubmit}>
+    <div> 
+      <div className="Login-form">
         <h3>Login Here</h3>
 
         <label htmlFor="username">Username</label>
@@ -49,13 +62,13 @@ export default function Login() {
           )}
         </span>
 
-        <button className="login-button">Log In</button>
+        <button type="submit" className="login-button" onClick={(e) => submitHandler(e)}>Log In</button>
         <br />
         <br />
         <p>
-          not have an account? <NavLink to={"/signup"}>Signup</NavLink>
+          not have an account? <NavLink to={"/signup"} className="link">Signup</NavLink>
         </p>
-      </form>
+      </div>
     </div>
   );
 }

@@ -10,6 +10,11 @@ body {
   top: 50%;
 }
 
+.heading{
+  text-align: center;
+  font-size: 32px;
+}
+
 .Signup-form {
   height: 550px;
   width: 400px;
@@ -73,6 +78,6 @@ input {
 
 .signup-eye{
   position: absolute;
-  top: 23.4rem;
+  top: 23.7rem;
   right: 3rem;
 }

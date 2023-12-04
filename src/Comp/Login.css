@@ -9,6 +9,10 @@ body {
   left: 50%;
   top: 50%;
 }
+h3{
+  font-size: 32px;
+  text-align: center;
+}
 
 .Login-form {
   height: 490px;
@@ -72,6 +76,10 @@ input {
 }
 .login-eye{
   position: absolute;
-  top: 16.7rem;
+  top: 16.4rem;
   right: 3rem;
+}
+
+.link{
+  color: white;
 }
