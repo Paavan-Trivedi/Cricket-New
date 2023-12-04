@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
@@ -11,21 +12,45 @@ export default function Login() {
   const [register, setRegister] = useState(false);
   const navigate = useNavigate();
 
-  const submitHandler = async () => {
-    await fetch("http://192.168.29.84:8000/api/login/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        username: name,
-        password: password,
-      }),
-    });
-    setRegister(true);
-    navigate("/");
+  const submitHandler = () => {
+    axios
+      .post(
+        "http://192.168.29.84:8000/api/login/",
+        {
+          username: name,
+          password: password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      )
+      .then(() => {
+        setRegister(true);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error("Error occurred:", error);
+      });
   };
+
+  // const submitHandler = async () => {
+  //   await fetch("http://192.168.29.84:8000/api/login/", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       username: name,
+  //       password: password,
+  //     }),
+  //   });
+  //   setRegister(true);
+  //   navigate("/");
+  // };
 
   return (
     <div>
