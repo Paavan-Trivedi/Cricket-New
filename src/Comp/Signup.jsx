@@ -15,7 +15,7 @@ export default function Signup() {
   const submitHandler = () => {
     axios
       .post(
-        "http://192.168.29.84:8000/api/login/",
+        "http://192.168.29.84:8000/api/register/",
         {
           username: name,
           Email: email,
@@ -36,23 +36,6 @@ export default function Signup() {
         console.error("Error occurred:", error);
       });
   };
-
-  // const submitHandler = async () => {
-  //   await fetch("http://192.168.29.84:8000/api/register/", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       username: name,
-  //       email,
-  //       password,
-  //     }),
-  //   });
-  //   setRegister(true);
-  //   navigate("/login");
-  // };
 
   return (
     <div>

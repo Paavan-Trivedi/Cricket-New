@@ -36,22 +36,6 @@ export default function Login() {
       });
   };
 
-  // const submitHandler = async () => {
-  //   await fetch("http://192.168.29.84:8000/api/login/", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       username: name,
-  //       password: password,
-  //     }),
-  //   });
-  //   setRegister(true);
-  //   navigate("/");
-  // };
-
   return (
     <div>
       <div className="Login-form">
