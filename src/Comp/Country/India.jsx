@@ -45,7 +45,7 @@ export default function India() {
           }
 
         })
-          .map((player, index) => {
+          .map((player) => {
             return (
               <ul key={player.player_id} >
                 <div className="playerdets">
@@ -67,7 +67,7 @@ export default function India() {
   );
 }
 
-export function Male() {
+export function InMale() {
   const [search, setSearch] = useState("")
   const [Players, setPlayers] = useState([])
 
@@ -80,7 +80,7 @@ export function Male() {
         console.error('Error fetching data:', error);
       });
   };
-  
+
   useEffect(() => {
     getUsers();
   }, []);
@@ -127,12 +127,10 @@ export function Male() {
           })}
       </div>
     </>
-
-
   )
 }
 
-export function Female() {
+export function InFemale() {
   const [search, setSearch] = useState("")
   const [Players, setPlayers] = useState([])
 
@@ -145,7 +143,7 @@ export function Female() {
         console.error('Error fetching data:', error);
       });
   };
-  
+
   useEffect(() => {
     getUsers();
   }, []);
@@ -192,7 +190,5 @@ export function Female() {
           })}
       </div>
     </>
-
-
   )
 }
