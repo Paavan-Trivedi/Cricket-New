@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from "react";
-import Players from "../india-6_player.json";
+import axios from "axios";
 import { NavLink } from "react-router-dom";
 
 export default function India() {
 
   const [search, setSearch] = useState("")
-  // const [Players, setPlayers] = useState([])
+  const [Players, setPlayers] = useState([])
 
-  //   const getusers = async () => {
-  //       try {
-  //           const response = await fetch('http://192.168.0.214:3000/addPlayer');
-  //           const data = await response.json();
-
-  //           setPlayers(data|| []);
-  //       } catch (error) {
-  //           console.error('Error fetching data:', error);
-  //       }
-  //   }
-
-  //   useEffect(() => {
-  //       getusers();
-  //   }, [])
+  const getUsers = () => {
+    axios.get('http://192.168.29.84:8000/playerapi/')
+      .then((response) => {
+        setPlayers(response.data || []);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  };
+  useEffect(() => {
+    getUsers();
+  }, []);
 
   return (
     <>
@@ -34,22 +32,22 @@ export default function India() {
         />
       </div>
       <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink>
-      <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink>
-      <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>
+      <NavLink to={"/india/male"} ><button className="Btn" >Men</button> </NavLink>
+      <NavLink to={"/india/female"} ><button className="Btn" >Women</button> </NavLink>
 
       <div className="players">
         {Players.filter((val) => {
-          if (search == '') {
+          if (search == '' && val.player_country == "india-6") {
             return val
           }
-          else if (val.playerName.toLowerCase().includes(search.toLowerCase())) {
+          else if (val.player_country == "india-6" && val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
 
         })
           .map((player, index) => {
             return (
-              <ul>
+              <ul key={player.player_id} >
                 <div className="playerdets">
                   <li className="playername">{player.player_name}</li>
                   <li className="playerimg">
@@ -57,9 +55,9 @@ export default function India() {
                   </li>
                 </div>
                 <div className="playerslist">
-                  <li>Role: {player.Playing_role}</li>
+                  <li>Role: {player.player_playing_role}</li>
                   <li>Age: {player.player_age}</li>
-                  <li>Gender: {player.Gender}</li>
+                  <li>Gender: {player.player_gender}</li>
                 </div>
               </ul>
             );
@@ -71,22 +69,21 @@ export default function India() {
 
 export function Male() {
   const [search, setSearch] = useState("")
-  // const [Players, setPlayers] = useState([])
+  const [Players, setPlayers] = useState([])
 
-  //   const getusers = async () => {
-  //       try {
-  //           const response = await fetch('http://192.168.0.214:3000/addPlayer');
-  //           const data = await response.json();
-
-  //           setPlayers(data|| []);
-  //       } catch (error) {
-  //           console.error('Error fetching data:', error);
-  //       }
-  //   }
-
-  //   useEffect(() => {
-  //       getusers();
-  //   }, [])
+  const getUsers = () => {
+    axios.get('http://192.168.29.84:8000/playerapi/ ')
+      .then((response) => {
+        setPlayers(response.data || []);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  };
+  
+  useEffect(() => {
+    getUsers();
+  }, []);
   return (
     <>
       <div className="Playersearch">
@@ -99,21 +96,21 @@ export function Male() {
         />
       </div>
       <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink>
-      <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink>
-      <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>
+      <NavLink to={"/india/male"} ><button className="Btn" >Men</button> </NavLink>
+      <NavLink to={"/india/female"} ><button className="Btn" >Women</button> </NavLink>
       <div className="players">
         {Players.filter((val) => {
-          if (val.Gender == "Male" && search == '') {
+          if (val.player_gender == "Male" && val.player_country == "india-6" && search == '' && val.player_country) {
             return val
           }
-          else if (val.Gender == "Male" && val.playerName.toLowerCase().includes(search.toLowerCase())) {
+          else if (val.player_gender == "Male" && val.player_country == "india-6" && val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
 
         })
           .map((player) => {
             return (
-              <ul>
+              <ul key={player.player_id}>
                 <div className="playerdets">
                   <li className="playername">{player.player_name}</li>
                   <li className="playerimg">
@@ -121,9 +118,9 @@ export function Male() {
                   </li>
                 </div>
                 <div className="playerslist">
-                  <li>Role: {player.Playing_role}</li>
+                  <li>Role: {player.player_playing_role}</li>
                   <li>Age: {player.player_age}</li>
-                  <li>Gender: {player.Gender}</li>
+                  <li>Gender: {player.player_gender}</li>
                 </div>
               </ul>
             );
@@ -137,22 +134,21 @@ export function Male() {
 
 export function Female() {
   const [search, setSearch] = useState("")
-  // const [Players, setPlayers] = useState([])
+  const [Players, setPlayers] = useState([])
 
-  // const getusers = async () => {
-  //   try {
-  //     const response = await fetch('http://192.168.0.214:3000/addPlayer');
-  //     const data = await response.json();
-
-  //     setPlayers(data || []);
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getusers();
-  // }, [])
+  const getUsers = () => {
+    axios.get('http://192.168.29.84:8000/playerapi/')
+      .then((response) => {
+        setPlayers(response.data || []);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  };
+  
+  useEffect(() => {
+    getUsers();
+  }, []);
   return (
     <>
       <div className="Playersearch">
@@ -165,21 +161,21 @@ export function Female() {
         />
       </div>
       <NavLink to={"/india"} ><button className="Btn" >All</button> </NavLink>
-      <NavLink to={"/male"} ><button className="Btn" >Men</button> </NavLink>
-      <NavLink to={"/female"} ><button className="Btn" >Women</button> </NavLink>
+      <NavLink to={"/india/male"} ><button className="Btn" >Men</button> </NavLink>
+      <NavLink to={"/india/female"} ><button className="Btn" >Women</button> </NavLink>
       <div className="players">
         {Players.filter((val) => {
-          if (val.Gender == "female" && search == '') {
+          if (val.player_gender == "female" && search == '' && val.player_country == "india-6") {
             return val
           }
-          else if (val.Gender == "female" && val.playerName.toLowerCase().includes(search.toLowerCase())) {
+          else if (val.player_gender == "female" && val.player_country == "india-6" && val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
 
         })
           .map((player) => {
             return (
-              <ul>
+              <ul key={player.player_id}>
                 <div className="playerdets">
                   <li className="playername">{player.player_name}</li>
                   <li className="playerimg">
@@ -187,9 +183,9 @@ export function Female() {
                   </li>
                 </div>
                 <div className="playerslist">
-                  <li>Role: {player.Playing_role}</li>
+                  <li>Role: {player.player_playing_role}</li>
                   <li>Age: {player.player_age}</li>
-                  <li>Gender: {player.Gender}</li>
+                  <li>Gender: {player.player_gender}</li>
                 </div>
               </ul>
             );
