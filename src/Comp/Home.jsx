@@ -121,7 +121,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="ranking-table">Ranking Table</div>
+        <div className="ranking-table">
+          <h2>Ranking Table</h2>
+        </div>
       </div>
     </>
   );
