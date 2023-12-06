@@ -11,7 +11,7 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [register, setRegister] = useState(false);
   const navigate = useNavigate();
-
+  
   const submitHandler = () => {
     axios
       .post(
