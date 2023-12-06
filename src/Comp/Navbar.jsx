@@ -1,8 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import axios from "axios";
 
 export default function Navbar() {
- 
+  const navigate = useNavigate();
+
+  const Logout = () => {
+    navigate("/login")
+  }
+
   return (
     <>
       <nav className="navbar">
@@ -13,13 +19,11 @@ export default function Navbar() {
           <li>
             <h1 className="heading">Cric-Info</h1>
           </li>
+         
           <div className="hdbtn">
-          
-          <li>
-            <NavLink to={"/login"}>
-              <button className="login">Login</button>
-            </NavLink>
-          </li>
+            <li>
+              <button className="login" onClick={() => Logout()}>Logout</button>
+            </li>
           </div>
         </ul>
       </nav>

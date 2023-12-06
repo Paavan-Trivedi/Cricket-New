@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Login(props) {
   const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -29,10 +29,10 @@ export default function Login() {
       )
       .then(() => {
         setRegister(true);
-        navigate("/");
+        navigate("/home");
       })
       .catch((error) => {
-        console.error("Error occurred:", error);
+        alert("Please enter valid data", error);
       });
   };
 
@@ -86,6 +86,7 @@ export default function Login() {
             Signup
           </NavLink>
         </p>
+        
       </div>
     </div>
   );

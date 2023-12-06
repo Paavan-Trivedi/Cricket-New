@@ -19,7 +19,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />"
         <Route path="/india" element={<India />} />
         <Route path="/india/male" element={<InMale />} />
         <Route path="/india/female" element={<InFemale />} />
@@ -51,7 +52,6 @@ function App() {
         <Route path="/Zimbabwe" element={<Zimbabwe />} />
         <Route path="/Zimbabwe/male" element={<ZiMale />} />
         <Route path="/Zimbabwe/female" element={<ZiFemale />} />
-
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
