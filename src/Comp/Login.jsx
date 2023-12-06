@@ -12,7 +12,7 @@ export default function Login() {
   const [register, setRegister] = useState(false);
   const navigate = useNavigate();
 
-  const submitHandler = () => {
+  const LoginHandler = () => {
     axios
       .post(
         "http://192.168.29.84:8000/api/login/",
@@ -74,7 +74,7 @@ export default function Login() {
         <button
           type="submit"
           className="login-button"
-          onClick={(e) => submitHandler(e)}
+          onClick={(e) => LoginHandler(e)}
         >
           Log In
         </button>

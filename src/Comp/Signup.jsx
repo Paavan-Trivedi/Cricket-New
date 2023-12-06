@@ -18,7 +18,7 @@ export default function Signup() {
         "http://192.168.29.84:8000/api/register/",
         {
           username: name,
-          Email: email,
+          email: email,
           password: password,
         },
         {
