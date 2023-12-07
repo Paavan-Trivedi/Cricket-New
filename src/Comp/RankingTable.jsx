@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 const RankingTable = () => {
-    const [Players, setPlayers] = useState([]);
+  const [Players, setPlayers] = useState([]);
 
   const getdata = () => {
     axios
@@ -16,6 +16,8 @@ const RankingTable = () => {
   useEffect(() => {
     getdata();
   }, []);
+
+
   return (
     <div className="ranking-table">
       <h2>Ranking Table</h2>
@@ -23,13 +25,14 @@ const RankingTable = () => {
         {Players.map((player) => {
           return (
             <ul key={player.id}>
-              <div className="playerdets">
-                <li className="playername">{player.name}</li>
-                <li className="playerimg">
+              <div className="">
+                <li className="">{player.id}</li>
+                <li className="">{player.name}</li>
+                <li className="">
                   <img src={player.image} alt="" />
                 </li>
               </div>
-              <div className="playerslist">
+              <div className="">
                 <li>Role: {player.country}</li>
                 <li>Gender: {player.gender}</li>
               </div>
