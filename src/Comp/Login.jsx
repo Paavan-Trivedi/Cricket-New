@@ -1,39 +1,25 @@
-import React, { useState } from "react";
-import "./Login.css";
-import axios from "axios";
-import { NavLink } from "react-router-dom";
-import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import "./Login.css"
 
-export default function Login(props) {
-  const [showPassword, setShowPassword] = useState(false);
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [register, setRegister] = useState(false);
+export default function Login() {
+  const {
+    showPassword,
+    setShowPassword,
+    name,
+    setName,
+    password,
+    setPassword,
+    register,
+    login,
+  } = useAuth();
   const navigate = useNavigate();
 
-  const LoginHandler = () => {
-    axios
-      .post(
-        "http://192.168.29.84:8000/api/login/",
-        {
-          username: name,
-          password: password,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        }
-      )
-      .then(() => {
-        setRegister(true);
-        navigate("/home");
-      })
-      .catch((error) => {
-        alert("Please enter valid data", error);
-      });
+  const handleLogin = () => {
+    login(navigate("/"));
   };
 
   return (
@@ -53,17 +39,14 @@ export default function Login(props) {
 
         <label htmlFor="password">Password</label>
         <input
-          type={showPassword ? "text" : "password"}
+          type={showPassword ? 'text' : 'password'}
           placeholder="Password"
           id="password"
           required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <span
-          onClick={() => setShowPassword(!showPassword)}
-          className="login-eye"
-        >
+        <span onClick={() => setShowPassword(!showPassword)} className="login-eye">
           {showPassword ? (
             <AiOutlineEye fontSize={24} fill="#AFB2BF" />
           ) : (
@@ -71,22 +54,17 @@ export default function Login(props) {
           )}
         </span>
 
-        <button
-          type="submit"
-          className="login-button"
-          onClick={(e) => LoginHandler(e)}
-        >
+        <button type="submit" className="login-button" onClick={handleLogin}>
           Log In
         </button>
         <br />
         <br />
         <p>
-          not have an account?{" "}
-          <NavLink to={"/signup"} className="link">
+          not have an account?{' '}
+          <NavLink to={'/signup'} className="link">
             Signup
           </NavLink>
         </p>
-        
       </div>
     </div>
   );
