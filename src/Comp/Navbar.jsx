@@ -22,7 +22,7 @@ export default function Navbar() {
             <img src="Main Logo.png" alt="" />
           </li>
           <li>
-            <h1 className="heading">Cric-Info</h1>
+            <h1 className="headin">Cric-Info</h1>
           </li>
           <User />
           <div className="hdbtn">
