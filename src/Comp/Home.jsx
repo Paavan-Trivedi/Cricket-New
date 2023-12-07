@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import Navbar from "./Navbar";
+import RankingTable from "./RankingTable";
 
 export default function Home() {
   
@@ -128,9 +129,7 @@ export default function Home() {
               ))}
           </div>
         </div>
-        <div className="ranking-table">
-          <h2>Ranking Table</h2>
-        </div>
+        <RankingTable/>
       </div>
     </>
   );
