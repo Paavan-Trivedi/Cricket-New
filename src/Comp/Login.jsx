@@ -19,7 +19,8 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    login(navigate("/"));
+    localStorage.setItem("login", true);
+    navigate("/");
   };
 
   return (
@@ -54,7 +55,7 @@ export default function Login() {
           )}
         </span>
 
-        <button type="submit" className="login-button" onClick={handleLogin}>
+        <button type="submit" className="login-button" onClick={() =>handleLogin()}>
           Log In
         </button>
         <br />

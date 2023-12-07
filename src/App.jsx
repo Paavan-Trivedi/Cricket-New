@@ -14,13 +14,16 @@ import Pakistan, { PaFemale, PaMale } from "./Comp/Country/Pakistan";
 import SouthAfrica, { SoFemale, SoMale } from "./Comp/Country/SouthAfrica";
 import WestIndies, { WeFemale, WeMale } from "./Comp/Country/WestIndies";
 import Zimbabwe, { ZiFemale, ZiMale } from "./Comp/Country/Zimbabwe";
+import Protectedroute from "./Comp/ProtectedRoute";
+
 
 function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Protectedroute Component={Home} />} />"
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />"
+        <Route path="/signup" element={<Signup />} />
         <Route path="/india" element={<India />} />
         <Route path="/india/male" element={<InMale />} />
         <Route path="/india/female" element={<InFemale />} />
@@ -52,7 +55,6 @@ function App() {
         <Route path="/Zimbabwe" element={<Zimbabwe />} />
         <Route path="/Zimbabwe/male" element={<ZiMale />} />
         <Route path="/Zimbabwe/female" element={<ZiFemale />} />
-        <Route path="/signup" element={<Signup />} />
       </Routes>
     </>
   );
