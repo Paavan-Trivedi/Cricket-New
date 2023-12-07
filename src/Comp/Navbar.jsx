@@ -1,13 +1,18 @@
 import React from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import User from "./User";
 
 export default function Navbar() {
   const navigate = useNavigate();
 
-  const Logout = () => {
-    navigate("/login")
-  }
+  const loginHandler = () => {
+    navigate("/login");
+  };
+
+  const logoutHandler = () => {
+    localStorage.removeItem("login");
+    navigate("/login");
+  };
 
   return (
     <>
@@ -19,10 +24,18 @@ export default function Navbar() {
           <li>
             <h1 className="heading">Cric-Info</h1>
           </li>
-          <User/>
+          <User />
           <div className="hdbtn">
             <li>
-              <button className="login" onClick={() => Logout()}>Logout</button>
+              {localStorage.getItem("login") ? (
+                <button className="logout" onClick={() => logoutHandler()}>
+                  Logout
+                </button>
+              ) : (
+                <button className="login" onClick={() => loginHandler()}>
+                  Login
+                </button>
+              )}
             </li>
           </div>
         </ul>
