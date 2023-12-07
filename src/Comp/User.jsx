@@ -6,8 +6,8 @@ const User = () => {
   const { name,setName } = useAuth();
  
   return (
-    <div className="profile1">
-      <h1><CgProfile /> {name}</h1>
+    <div>
+      <h1 className="named"><CgProfile /> {name}</h1>
     </div>
   );
 };
