@@ -2,23 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
   background-image: radial-gradient(circle farthest-corner at 10% 20%,
-      rgba(100, 43, 115, 1) 0%,
-      rgba(4, 0, 4, 1) 90%);
+      /* rgba(100, 43, 115, 1) 0%, */
+      /* rgba(4, 0, 4, 1) 90%); */
+      rgb(100, 26, 97) 0%,
+      rgb(38, 4, 38) 90%);
+  background-repeat: no-repeat;
   backdrop-filter: blur(50px);
   background-size: cover;
   color: white;
-  width: 100%;
+  width: 1519px;
 }
 
 .nav {
   background-image: radial-gradient(circle farthest-corner at 10% 20%,
-      rgba(100, 43, 115, 1) 0%,
-      rgba(4, 0, 4, 1) 90%);
+      /* rgba(100, 43, 115, 1) 0%,
+      rgba(4, 0, 4, 1) 90%); */
+      rgb(102, 26, 121) 0%,
+      rgb(38, 4, 38) 85%);
   display: flex;
   justify-content: space-around;
 }
@@ -82,6 +86,8 @@ body {
   width: auto;
   margin-left: 30px;
   display: flex;
+  /* flex-wrap: wrap; */
+  width: 800px;
 }
 
 .cards {
@@ -270,18 +276,18 @@ body {
 }
 
 .ranking-table {
-  height: 500px;
-  width: 350px;
+  /* height: 500px; */
+  width: 380px;
   position: absolute;
   z-index: -1;
-  right: 50px;
+  right: 30px;
   overflow: hidden;
   background: linear-gradient(167deg, #282833 2.56%, #121217 97.88%);
+  padding: 20px 20px;
 }
 
 .ranking-table h2 {
   text-align: center;
-  margin-top: 12px;
   font-size: 27px;
 }
 
@@ -297,4 +303,28 @@ body {
   margin-left: 35px;
   margin-top: 15px;
   cursor: pointer;
+}
+
+.mainrank{
+  margin-top: 30px;
+}
+
+.ranktable{
+  display: flex;
+  list-style: none;
+}
+
+
+
+
+
+@media screen and (max-width:550px) {
+ 
+
+  .cards{
+    flex-wrap: wrap;
+    display: flex;
+  flex-direction: column;
+  }
+ 
 }

@@ -5,7 +5,7 @@ const RankingTable = () => {
 
   const getdata = () => {
     axios
-      .get("http://192.168.29.128:8000/player_info_api/")
+      .get("http://192.168.29.128:8000/app/icc_batting/")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -24,21 +24,17 @@ const RankingTable = () => {
       <button className="btnr">T20</button>
       <button className="btnr">Odi</button>
       <button className="btnr">Test</button>
-      <div>
+      <div className="mainrank">
         {Players.map((player) => {
           return (
-            <ul key={player.id}>
-              <div className="">
-                <li className="">{player.id}</li>
-                <li className="">{player.name}</li>
+            <ul key={player.rating} className="ranktable">
+                <li className="">{player.player.id}</li>
+                <li className="">{player.player.name}</li>
                 <li className="">
-                  <img src={player.image} alt="" />
+                  <img src={player.player.image} alt="" />
                 </li>
-              </div>
-              <div className="">
-                <li>Role: {player.country}</li>
+                <li>Country: {player.player.country}</li>
                 <li>Gender: {player.gender}</li>
-              </div>
             </ul>
           );
         })}
