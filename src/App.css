@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
 }
 
 body {
@@ -270,6 +270,7 @@ body {
 }
 
 .ranking-table {
+  height: 500px;
   width: 350px;
   position: absolute;
   z-index: -1;
@@ -278,6 +279,22 @@ body {
   background: linear-gradient(167deg, #282833 2.56%, #121217 97.88%);
 }
 
-.ranking-table h2{
+.ranking-table h2 {
   text-align: center;
+  margin-top: 12px;
+  font-size: 27px;
+}
+
+.btnr {
+  height: 30px;
+  width: 70px;
+  border-radius: 30px;
+  background-image: linear-gradient(to right,
+      #c04848 0%,
+      #480048 51%,
+      #c04848 100%);
+  color: white;
+  margin-left: 35px;
+  margin-top: 15px;
+  cursor: pointer;
 }

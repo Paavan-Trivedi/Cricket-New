@@ -20,7 +20,10 @@ const RankingTable = () => {
 
   return (
     <div className="ranking-table">
-      <h2>Ranking Table</h2>
+      <h2 className="rank">Ranking Table</h2>
+      <button className="btnr">T20</button>
+      <button className="btnr">Odi</button>
+      <button className="btnr">Test</button>
       <div>
         {Players.map((player) => {
           return (
