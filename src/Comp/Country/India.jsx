@@ -81,7 +81,7 @@ export function InMale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/app/playerapi/ ")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=india-6&player_gender=&player_playing_role= ")
       .then((response) => {
         setPlayers(response.data || []);
       })
