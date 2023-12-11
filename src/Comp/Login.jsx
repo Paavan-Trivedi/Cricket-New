@@ -3,7 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { toast } from 'react-hot-toast';
 import "./Login.css"
+
 
 export default function Login() {
   const {
@@ -21,6 +23,7 @@ export default function Login() {
   const handleLogin = () => {
     localStorage.setItem("login", true);
     navigate("/");
+    toast.success("Login Successfully");
   };
 
   return (
