@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import "../App.css";
 import axios from "axios";
 const RankingTable = () => {
   const [Players, setPlayers] = useState([]);
-
+  
   const getdata = () => {
     axios
       .get("http://192.168.29.128:8000/app/icc_batting/")
@@ -21,13 +22,13 @@ const RankingTable = () => {
   return (
     <div className="ranking-table">
       <h2 className="rank">Ranking Table</h2>
-      <button className="btnr">T20</button>
-      <button className="btnr">Odi</button>
-      <button className="btnr">Test</button>
+      <button className="Btn">Batting</button>
+      <button className="Btn">Bowling</button>
+      <button className="allrounder-button">All Rounder</button>
       <div className="mainrank">
         {Players.map((player) => {
           return (
-            <ul key={player.rating} className="ranktable">
+            <ul key={player.id} className="ranktable">
                 <li className="">{player.player.id}</li>
                 <li className="">{player.player.name}</li>
                 <li className="">
