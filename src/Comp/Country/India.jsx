@@ -8,7 +8,7 @@ export default function India() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -81,7 +81,7 @@ export function InMale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/ ")
+      .get("http://192.168.29.84:8000/app/playerapi/ ")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -159,7 +159,7 @@ export function InFemale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/")
       .then((response) => {
         setPlayers(response.data || []);
       })

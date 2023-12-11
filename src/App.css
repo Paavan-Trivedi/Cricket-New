@@ -18,9 +18,6 @@ body {
   width: 1519px;
 }
 
-.main_body {
-}
-
 .nav {
   background-image: radial-gradient(
     circle farthest-corner at 10% 20%,
@@ -97,14 +94,14 @@ body {
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
   margin: 30px;
   list-style: none;
 }
 
 .card-box {
-  height: 220px;
-  width: 203px;
+  height: 200px;
+  width: 200px;
   background: #282835a6;
   border-radius: 10px;
   text-align: center;
@@ -129,13 +126,13 @@ body {
 }
 
 .intro {
-  height: 120px;
-  width: 203px;
+  height: 100px;
+  width: 200px;
   padding: 6px;
   box-sizing: border-box;
   position: relative;
   color: white;
-  bottom: 10px;
+  bottom: 25px;
   transition: 500ms;
 }
 
@@ -286,10 +283,10 @@ body {
 }
 
 .ranking-table {
-  /* height: 500px; */
-  width: 400px;
+  height: auto;
+  width: 450px;
   position: absolute;
-  z-index: -1;
+  z-index:auto;
   right: 30px;
   overflow: hidden;
   background: linear-gradient(167deg, #282833 2.56%, #121217 97.88%);
@@ -381,6 +378,7 @@ body {
   }
 
   .ranking-table {
+    position: absolute;
     width: 365px;
     margin-top: 28px;
   }
