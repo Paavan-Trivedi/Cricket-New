@@ -41,22 +41,22 @@ const RankingTable = () => {
   const handleFormatChange = (format) => {
     setFormat(format);
     if (category === "Batting") {
-      getdata(`http://192.168.29.84:8000/app/icc_batting/?format=${format}`);
+      getdata(`http://192.168.29.84:8000/app/icc_batting/?series=${format}&player__gender=`);
     } else if (category === "Bowling") {
-      getdata(`http://192.168.29.84:8000/app/icc_bowling/?format=${format}`);
+      getdata(`http://192.168.29.84:8000/app/icc_bowling/?series=${format}&player__gender=`);
     } else if (category === "AllRounder") {
-      getdata(`http://192.168.29.84:8000/app/icc_allrounder/?format=${format}`);
+      getdata(`http://192.168.29.84:8000/app/icc_all_rounder/?series=${format}&player__gender=`);
     }
   };
 
   const handleGenderChange = (selectedGender) => {
     setGender(selectedGender);
     if (category === "Batting") {
-      getdata(`http://192.168.29.84:8000/app/icc_batting/?format=${format}&gender=${selectedGender}`);
+      getdata(`http://192.168.29.84:8000/app/icc_batting/?series=${format}&player__gender=${selectedGender}`);
     } else if (category === "Bowling") {
-      getdata(`http://192.168.29.84:8000/app/icc_bowling/?format=${format}&gender=${selectedGender}`);
+      getdata(`http://192.168.29.84:8000/app/icc_bowling/?series=${format}&player__gender=${selectedGender}`);
     } else if (category === "AllRounder") {
-      getdata(`http://192.168.29.84:8000/app/icc_allrounder/?format=${format}&gender=${selectedGender}`);
+      getdata(`http://192.168.29.84:8000/app/icc_all_rounder/?series=${format}&player__gender=${selectedGender}`);
     }
   };
 
@@ -71,16 +71,16 @@ const RankingTable = () => {
 
       {formatSelected && (
         <div>
-          <button onClick={() => handleFormatChange("ODI")}>ODI</button>
-          <button onClick={() => handleFormatChange("Test")}>Test</button>
-          <button onClick={() => handleFormatChange("T20")}>T20</button>
+          <button className="btnr" onClick={() => handleFormatChange("ODI")}>ODI</button>
+          <button className="btnr" onClick={() => handleFormatChange("Test")}>Test</button>
+          <button className="btnr" onClick={() => handleFormatChange("T20")}>T20</button>
         </div>
       )}
 
       {formatSelected && (
         <div>
-          <button onClick={() => handleGenderChange("Male")}>Men</button>
-          <button onClick={() => handleGenderChange("Female")}>Women</button>
+          <button className="btnr" onClick={() => handleGenderChange("Male")}>Men</button>
+          <button className="btnr" onClick={() => handleGenderChange("Female")}>Women</button>
         </div>
       )}
 
