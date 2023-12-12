@@ -8,7 +8,7 @@ export default function Pakistan() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=pakistan-7&player_gender=&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -45,10 +45,7 @@ export default function Pakistan() {
 
       <div className="players">
         {Players.filter((val) => {
-          if (search == "" && val.player_country == "pakistan-7") {
-            return val;
-          } else if (
-            val.player_country == "pakistan-7" &&
+          if (
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;
@@ -81,7 +78,7 @@ export function PaMale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/ ")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=pakistan-7&player_gender=male&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -118,15 +115,6 @@ export function PaMale() {
       <div className="players">
         {Players.filter((val) => {
           if (
-            val.player_gender == "Male" &&
-            val.player_country == "pakistan-7" &&
-            search == "" &&
-            val.player_country
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "Male" &&
-            val.player_country == "pakistan-7" &&
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;
@@ -159,7 +147,7 @@ export function PaFemale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=pakistan-7&player_gender=female&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -196,14 +184,6 @@ export function PaFemale() {
       <div className="players">
         {Players.filter((val) => {
           if (
-            val.player_gender == "female" &&
-            search == "" &&
-            val.player_country == "pakistan-7"
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "female" &&
-            val.player_country == "pakistan-7" &&
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;

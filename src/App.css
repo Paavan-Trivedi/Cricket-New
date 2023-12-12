@@ -337,6 +337,10 @@ body {
   list-style: none;
 }
 
+
+
+
+
 @media screen and (max-width: 550px) {
   .cards {
     flex-wrap: wrap;
@@ -345,7 +349,6 @@ body {
   }
 }
 
-/* Add media queries for different screen sizes */
 
 @media screen and (max-width: 1200px) {
   body {
