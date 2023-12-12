@@ -15,7 +15,7 @@ export default function Signup() {
   const submitHandler = () => {
     axios
       .post(
-        "http://192.168.29.84:9000/api/register/",
+        "http://192.168.29.84:8000/accounts/api/register/",
         {
           username: name,
           email: email,

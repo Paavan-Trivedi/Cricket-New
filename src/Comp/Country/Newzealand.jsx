@@ -8,7 +8,7 @@ export default function Newzealand() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=new-zealand-5&player_gender=&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -45,10 +45,7 @@ export default function Newzealand() {
 
       <div className="players">
         {Players.filter((val) => {
-          if (search == "" && val.player_country == "new-zealand-5") {
-            return val;
-          } else if (
-            val.player_country == "new-zealand-5" &&
+        if (
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;
@@ -81,7 +78,7 @@ export function NeMale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/ ")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=new-zealand-5&player_gender=male&player_playing_role= ")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -118,15 +115,6 @@ export function NeMale() {
       <div className="players">
         {Players.filter((val) => {
           if (
-            val.player_gender == "Male" &&
-            val.player_country == "new-zealand-5" &&
-            search == "" &&
-            val.player_country
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "Male" &&
-            val.player_country == "new-zealand-5" &&
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;
@@ -159,7 +147,7 @@ export function NeFemale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=new-zealand-5&player_gender=female&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -196,14 +184,6 @@ export function NeFemale() {
       <div className="players">
         {Players.filter((val) => {
           if (
-            val.player_gender == "female" &&
-            search == "" &&
-            val.player_country == "new-zealand-5"
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "female" &&
-            val.player_country == "new-zealand-5" &&
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;

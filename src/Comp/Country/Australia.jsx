@@ -8,7 +8,7 @@ export default function Australia() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=australia-2&player_gender=&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -45,12 +45,7 @@ export default function Australia() {
 
       <div className="players">
         {Players.filter((val) => {
-          if (search == "" && val.player_country == "australia-2") {
-            return val;
-          } else if (
-            val.player_country == "australia-2" &&
-            val.player_name.toLowerCase().includes(search.toLowerCase())
-          ) {
+          if (val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
         }).map((player) => {
@@ -81,7 +76,7 @@ export function AuMale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/ ")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=australia-2&player_gender=male&player_playing_role= ")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -117,18 +112,7 @@ export function AuMale() {
       </NavLink>
       <div className="players">
         {Players.filter((val) => {
-          if (
-            val.player_gender == "Male" &&
-            val.player_country == "australia-2" &&
-            search == "" &&
-            val.player_country
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "Male" &&
-            val.player_country == "australia-2" &&
-            val.player_name.toLowerCase().includes(search.toLowerCase())
-          ) {
+          if (val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
         }).map((player) => {
@@ -159,7 +143,7 @@ export function AuFemale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=australia-2&player_gender=female&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -195,17 +179,7 @@ export function AuFemale() {
       </NavLink>
       <div className="players">
         {Players.filter((val) => {
-          if (
-            val.player_gender == "female" &&
-            search == "" &&
-            val.player_country == "australia-2"
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "female" &&
-            val.player_country == "australia-2" &&
-            val.player_name.toLowerCase().includes(search.toLowerCase())
-          ) {
+          if (val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
         }).map((player) => {
