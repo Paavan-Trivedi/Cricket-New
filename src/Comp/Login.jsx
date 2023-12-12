@@ -21,9 +21,13 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    localStorage.setItem("login", true);
-    navigate("/");
-    toast.success("Login Successfully");
+    if (name == '' && password == "") {
+      toast.error("Pls Fill Data")
+    }else{
+      localStorage.setItem("login", true);
+      navigate("/");
+      toast.success("Login Successfully");
+    }
   };
 
   return (
