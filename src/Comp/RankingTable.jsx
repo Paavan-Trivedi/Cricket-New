@@ -21,7 +21,7 @@ const RankingTable = () => {
   };
 
   useEffect(() => {
-    getdata("http://192.168.29.128:8000/app/icc");
+    getdata("http://192.168.29.84:8000/app/icc");
   }, []);
 
   const handleCategoryChange = (category) => {
@@ -30,11 +30,11 @@ const RankingTable = () => {
     setGender("");
     setFormatSelected(true);
     if (category === "Batting") {
-      getdata("http://192.168.29.128:8000/app/icc_batting/");
+      getdata("http://192.168.29.84:8000/app/icc_batting/");
     } else if (category === "Bowling") {
-      getdata("http://192.168.29.128:8000/app/icc_bowling/");
+      getdata("http://192.168.29.84:8000/app/icc_bowling/");
     } else if (category === "AllRounder") {
-      getdata("http://192.168.29.128:8000/app/icc_all_rounder/");
+      getdata("http://192.168.29.84:8000/app/icc_all_rounder/");
     }
   };
 
