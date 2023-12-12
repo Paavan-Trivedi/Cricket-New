@@ -8,7 +8,9 @@ export default function England() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get(
+        "http://192.168.29.84:8000/app/playerapi/?player_country=england-1&player_gender=&player_playing_role="
+      )
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -45,12 +47,7 @@ export default function England() {
 
       <div className="players">
         {Players.filter((val) => {
-          if (search == "" && val.player_country == "england-1") {
-            return val;
-          } else if (
-            val.player_country == "england-1" &&
-            val.player_name.toLowerCase().includes(search.toLowerCase())
-          ) {
+          if (val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
         }).map((player) => {
@@ -81,7 +78,9 @@ export function EnMale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/ ")
+      .get(
+        "http://192.168.29.84:8000/app/playerapi/?player_country=england-1&player_gender=male&player_playing_role="
+      )
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -117,18 +116,7 @@ export function EnMale() {
       </NavLink>
       <div className="players">
         {Players.filter((val) => {
-          if (
-            val.player_gender == "Male" &&
-            val.player_country == "england-1" &&
-            search == "" &&
-            val.player_country
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "Male" &&
-            val.player_country == "england-1" &&
-            val.player_name.toLowerCase().includes(search.toLowerCase())
-          ) {
+          if (val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
         }).map((player) => {
@@ -159,7 +147,9 @@ export function EnFemale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get(
+        "http://192.168.29.84:8000/app/playerapi/?player_country=england-1&player_gender=female&player_playing_role="
+      )
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -195,17 +185,7 @@ export function EnFemale() {
       </NavLink>
       <div className="players">
         {Players.filter((val) => {
-          if (
-            val.player_gender == "female" &&
-            search == "" &&
-            val.player_country == "england-1"
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "female" &&
-            val.player_country == "england-1" &&
-            val.player_name.toLowerCase().includes(search.toLowerCase())
-          ) {
+          if (val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
         }).map((player) => {
