@@ -8,7 +8,7 @@ export default function Bangladesh() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=bangladesh-25&player_gender=&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -45,10 +45,7 @@ export default function Bangladesh() {
 
       <div className="players">
         {Players.filter((val) => {
-          if (search == "" && val.player_country == "bangladesh-25") {
-            return val;
-          } else if (
-            val.player_country == "bangladesh-25" &&
+          if (
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;
@@ -81,7 +78,7 @@ export function BaMale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/ ")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=bangladesh-25&player_gender=male&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -118,15 +115,6 @@ export function BaMale() {
       <div className="players">
         {Players.filter((val) => {
           if (
-            val.player_gender == "Male" &&
-            val.player_country == "bangladesh-25" &&
-            search == "" &&
-            val.player_country
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "Male" &&
-            val.player_country == "bangladesh-25" &&
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;
@@ -159,7 +147,7 @@ export function BaFemale() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=bangladesh-25&player_gender=female&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -196,14 +184,6 @@ export function BaFemale() {
       <div className="players">
         {Players.filter((val) => {
           if (
-            val.player_gender == "female" &&
-            search == "" &&
-            val.player_country == "bangladesh-25"
-          ) {
-            return val;
-          } else if (
-            val.player_gender == "female" &&
-            val.player_country == "bangladesh-25" &&
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;

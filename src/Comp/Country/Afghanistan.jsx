@@ -8,7 +8,7 @@ export default function Afghanistan() {
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/playerapi/")
+      .get("http://192.168.29.84:8000/app/playerapi/?player_country=afghanistan-40&player_gender=&player_playing_role=")
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -34,15 +34,12 @@ export default function Afghanistan() {
         />
       </div>
       <NavLink to={"/Afghanistan"}>
-        <button className="Btn">All</button>{" "}
+        <button className="Btn">Men</button>
       </NavLink>
 
       <div className="players">
         {Players.filter((val) => {
-          if (search == "" && val.player_country == "afghanistan-40") {
-            return val;
-          } else if (
-            val.player_country == "afghanistan-40" &&
+          if (
             val.player_name.toLowerCase().includes(search.toLowerCase())
           ) {
             return val;
