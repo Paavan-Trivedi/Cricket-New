@@ -41,22 +41,22 @@ const RankingTable = () => {
   const handleFormatChange = (format) => {
     setFormat(format);
     if (category === "Batting") {
-      getdata(`http://192.168.29.128:8000/app/icc_batting/?format=${format}`);
+      getdata(`http://192.168.29.84:8000/app/icc_batting/?format=${format}`);
     } else if (category === "Bowling") {
-      getdata(`http://192.168.29.128:8000/app/icc_bowling/?format=${format}`);
+      getdata(`http://192.168.29.84:8000/app/icc_bowling/?format=${format}`);
     } else if (category === "AllRounder") {
-      getdata(`http://192.168.29.128:8000/app/icc_allrounder/?format=${format}`);
+      getdata(`http://192.168.29.84:8000/app/icc_allrounder/?format=${format}`);
     }
   };
 
   const handleGenderChange = (selectedGender) => {
     setGender(selectedGender);
     if (category === "Batting") {
-      getdata(`http://192.168.29.128:8000/app/icc_batting/?format=${format}&gender=${selectedGender}`);
+      getdata(`http://192.168.29.84:8000/app/icc_batting/?format=${format}&gender=${selectedGender}`);
     } else if (category === "Bowling") {
-      getdata(`http://192.168.29.128:8000/app/icc_bowling/?format=${format}&gender=${selectedGender}`);
+      getdata(`http://192.168.29.84:8000/app/icc_bowling/?format=${format}&gender=${selectedGender}`);
     } else if (category === "AllRounder") {
-      getdata(`http://192.168.29.128:8000/app/icc_allrounder/?format=${format}&gender=${selectedGender}`);
+      getdata(`http://192.168.29.84:8000/app/icc_allrounder/?format=${format}&gender=${selectedGender}`);
     }
   };
 
@@ -89,6 +89,7 @@ const RankingTable = () => {
           return (
             <ul key={index} className="ranktable">
               <li className="">{player.position}</li>
+              <li className="">{player.series}</li>
               <li className="">{player.player.name}</li>
               <li className="">
                 <img src={player.player.image} alt="" />
