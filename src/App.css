@@ -6,9 +6,9 @@
 
 body {
   background-image: radial-gradient(circle farthest-corner at 10% 20%,
-      /* rgba(100, 43, 115, 1) 0%, */
-      /* rgba(4, 0, 4, 1) 90%); */
-      rgb(100, 26, 97) 0%,
+      /* rgba(100, 43, 115, 1) 0%, 
+      rgba(4, 0, 4, 1) 90%); */
+      rgb(25, 74, 101) 0%,
       rgb(38, 4, 38) 90%);
   background-repeat: no-repeat;
   backdrop-filter: blur(50px);
@@ -21,8 +21,8 @@ body {
   background-image: radial-gradient(circle farthest-corner at 10% 20%,
       /* rgba(100, 43, 115, 1) 0%,
       rgba(4, 0, 4, 1) 90%); */
-      rgb(102, 26, 121) 0%,
-      rgb(38, 4, 38) 85%);
+      rgb(25, 74, 101) 0%,
+      rgb(38, 4, 38) 90%);
   display: flex;
   justify-content: space-around;
 }
@@ -303,21 +303,21 @@ body {
   cursor: pointer;
 }
 
-.categorybtn{
+.categorybtn {
   margin-left: 60px;
   margin-top: 15px;
   gap: 80px;
   display: flex;
 }
 
-.formatbtn{
+.formatbtn {
   gap: 40px;
   margin-left: 100px;
   margin-top: 10px;
   display: flex;
 }
 
-.btnrf{
+.btnrf {
   height: 30px;
   width: 70px;
   border-radius: 20px;
@@ -329,14 +329,14 @@ body {
   cursor: pointer;
 }
 
-.genderbtn{
+.genderbtn {
   gap: 40px;
   margin-left: 160px;
   margin-top: 10px;
   display: flex;
 }
 
-.btnrg{
+.btnrg {
   height: 30px;
   width: 70px;
   border-radius: 20px;
@@ -363,7 +363,7 @@ body {
 
 .mainrank {
   margin-top: 30px;
-  background-color: #49063f ;
+  background-color: #49063f;
 }
 
 .ranktable {
@@ -428,7 +428,7 @@ body {
   display: flex;
 }
 
-.tab1{
+.tab1 {
   height: 50px;
   border: 1px solid white;
   width: 60px;
@@ -439,37 +439,43 @@ body {
 
 
 }
-.tab2{
+
+.tab2 {
   border: 1px solid white;
   width: 50px;
   word-break: break-all;
 
-  
+
 }
-.tab3{
+
+.tab3 {
   border: 1px solid white;
   width: 100px;
   word-break: break-all;
 
 }
-.tab4{
+
+.tab4 {
   border: 1px solid white;
   width: 50px;
   word-break: break-all;
 }
-.tab5{
+
+.tab5 {
   border: 1px solid white;
   width: 115px;
   word-break: break-all;
 
 }
-.tab6{
+
+.tab6 {
   border: 1px solid white;
   width: 60px;
   word-break: break-all;
 
 }
-.tab7{
+
+.tab7 {
   border: 1px solid white;
   width: 55px;
   word-break: break-all;
