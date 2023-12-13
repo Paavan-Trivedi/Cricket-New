@@ -5,12 +5,11 @@
 }
 
 body {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    /* rgba(100, 43, 115, 1) 0%, */ /* rgba(4, 0, 4, 1) 90%); */
+  background-image: radial-gradient(circle farthest-corner at 10% 20%,
+      /* rgba(100, 43, 115, 1) 0%, */
+      /* rgba(4, 0, 4, 1) 90%); */
       rgb(100, 26, 97) 0%,
-    rgb(38, 4, 38) 90%
-  );
+      rgb(38, 4, 38) 90%);
   background-repeat: no-repeat;
   backdrop-filter: blur(50px);
   background-size: cover;
@@ -19,13 +18,11 @@ body {
 }
 
 .nav {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    /* rgba(100, 43, 115, 1) 0%,
+  background-image: radial-gradient(circle farthest-corner at 10% 20%,
+      /* rgba(100, 43, 115, 1) 0%,
       rgba(4, 0, 4, 1) 90%); */
       rgb(102, 26, 121) 0%,
-    rgb(38, 4, 38) 85%
-  );
+      rgb(38, 4, 38) 85%);
   display: flex;
   justify-content: space-around;
 }
@@ -79,16 +76,14 @@ body {
 
 .view {
   display: flex;
-  gap: 80px;
+  gap: 30px;
 }
 
+
+
 .card {
-  height: auto;
-  width: auto;
-  margin-left: 30px;
-  display: flex;
-  /* flex-wrap: wrap; */
-  width: 800px;
+  margin-left: 20px;
+  /* display: flex; */
 }
 
 .cards {
@@ -101,7 +96,7 @@ body {
 
 .card-box {
   height: 200px;
-  width: 200px;
+  width: 180px;
   background: #282835a6;
   border-radius: 10px;
   text-align: center;
@@ -110,6 +105,12 @@ body {
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+
+.card-box img {
+  width: 180px;
+  height: 110px;
 }
 
 .Indiateam {
@@ -127,7 +128,7 @@ body {
 
 .intro {
   height: 100px;
-  width: 200px;
+  width: 180px;
   padding: 6px;
   box-sizing: border-box;
   position: relative;
@@ -158,12 +159,10 @@ body {
 
 .login {
   color: white;
-  background-image: linear-gradient(
-    to right,
-    #aa076b 0%,
-    #61045f 51%,
-    #aa076b 100%
-  );
+  background-image: linear-gradient(to right,
+      #aa076b 0%,
+      #61045f 51%,
+      #aa076b 100%);
   height: 30px;
   width: 100px;
   border-radius: 10px;
@@ -175,12 +174,10 @@ body {
 
 .logout {
   color: white;
-  background-image: linear-gradient(
-    to right,
-    #aa076b 0%,
-    #61045f 51%,
-    #aa076b 100%
-  );
+  background-image: linear-gradient(to right,
+      #aa076b 0%,
+      #61045f 51%,
+      #aa076b 100%);
   height: 30px;
   width: 100px;
   border-radius: 10px;
@@ -271,12 +268,10 @@ body {
   height: 30px;
   width: 70px;
   border-radius: 30px;
-  background-image: linear-gradient(
-    to right,
-    #c04848 0%,
-    #480048 51%,
-    #c04848 100%
-  );
+  background-image: linear-gradient(to right,
+      #c04848 0%,
+      #480048 51%,
+      #c04848 100%);
   color: white;
   margin-left: 50px;
   cursor: pointer;
@@ -284,13 +279,10 @@ body {
 
 .ranking-table {
   height: auto;
-  width: 450px;
-  position: absolute;
-  z-index:auto;
+  width: 530px;
   right: 30px;
-  overflow: hidden;
-  background: linear-gradient(167deg, #282833 2.56%, #121217 97.88%);
-  padding: 20px 20px;
+  padding: 10px 20px;
+  background-color: rgb(128, 12, 93);
 }
 
 .ranking-table h2 {
@@ -301,35 +293,77 @@ body {
 .btnr {
   height: 30px;
   width: 70px;
-  border-radius: 30px;
-  background-image: linear-gradient(  
-    to right,
-    #c04848 0%,
-    #480048 51%,
-    #c04848 100%
-  );
+  border-radius: 20px;
+  background-image: linear-gradient(to right,
+      #c04848 0%,
+      #480048 51%,
+      #c04848 100%);
   color: white;
-  margin-left: 35px;
-  margin-top: 15px;
+  margin-top: 5px;
   cursor: pointer;
 }
-.allrounder-button{
+
+.categorybtn{
+  margin-left: 60px;
+  margin-top: 15px;
+  gap: 80px;
+  display: flex;
+}
+
+.formatbtn{
+  gap: 40px;
+  margin-left: 100px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.btnrf{
+  height: 30px;
+  width: 70px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right,
+      #c04848 0%,
+      #480048 51%,
+      #c04848 100%);
+  color: white;
+  cursor: pointer;
+}
+
+.genderbtn{
+  gap: 40px;
+  margin-left: 160px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.btnrg{
+  height: 30px;
+  width: 70px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right,
+      #c04848 0%,
+      #480048 51%,
+      #c04848 100%);
+  color: white;
+  cursor: pointer;
+}
+
+.allrounder-button {
   height: 30px;
   width: 85px;
   border-radius: 30px;
-  background-image: linear-gradient(  
-    to right,
-    #c04848 0%,
-    #480048 51%,
-    #c04848 100%
-  );
+  background-image: linear-gradient(to right,
+      #c04848 0%,
+      #480048 51%,
+      #c04848 100%);
   color: white;
-  margin-left: 35px;
-  margin-top: 15px;
+  margin-top: 5px;
   cursor: pointer;
 }
+
 .mainrank {
   margin-top: 30px;
+  background-color: #49063f ;
 }
 
 .ranktable {
@@ -337,8 +371,114 @@ body {
   list-style: none;
 }
 
+.rankingt1 {
+  border: 1px solid white;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.rankingt2 {
+  border: 1px solid white;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.rankingt3 {
+  border: 1px solid white;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.rankingt4 {
+  border: 1px solid white;
+  width: 50px;
+}
+
+.rankingt5 {
+  border: 1px solid white;
+  width: 115px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  word-break: break-all;
+}
+
+.rankingt6 {
+  border: 1px solid white;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.rankingt7 {
+  border: 1px solid white;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.tab1{
+  height: 50px;
+  border: 1px solid white;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 
 
+}
+.tab2{
+  border: 1px solid white;
+  width: 50px;
+  word-break: break-all;
+
+  
+}
+.tab3{
+  border: 1px solid white;
+  width: 100px;
+  word-break: break-all;
+
+}
+.tab4{
+  border: 1px solid white;
+  width: 50px;
+  word-break: break-all;
+}
+.tab5{
+  border: 1px solid white;
+  width: 115px;
+  word-break: break-all;
+
+}
+.tab6{
+  border: 1px solid white;
+  width: 60px;
+  word-break: break-all;
+
+}
+.tab7{
+  border: 1px solid white;
+  width: 55px;
+  word-break: break-all;
+
+}
+
+
+
+/* 
 
 
 @media screen and (max-width: 550px) {
@@ -404,4 +544,4 @@ body {
   .view {
     width: 100%;
   }
-}
+} */

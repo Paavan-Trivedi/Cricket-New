@@ -62,40 +62,50 @@ const RankingTable = () => {
 
   return (
     <div className="ranking-table">
-      <h2 className="rank">Ranking Table</h2>
-      <div>
+      <h2>Ranking Table</h2>
+      <div className="categorybtn">
         <button className="btnr" onClick={() => handleCategoryChange("Batting")}>Batting</button>
         <button className="btnr" onClick={() => handleCategoryChange("Bowling")}>Bowling</button>
         <button className="allrounder-button" onClick={() => handleCategoryChange("AllRounder")}>All Rounder</button>
       </div>
 
       {formatSelected && (
-        <div>
-          <button className="btnr" onClick={() => handleFormatChange("ODI")}>ODI</button>
-          <button className="btnr" onClick={() => handleFormatChange("Test")}>Test</button>
-          <button className="btnr" onClick={() => handleFormatChange("T20")}>T20</button>
+        <div className="formatbtn">
+          <button className="btnrf" onClick={() => handleFormatChange("ODI")}>ODI</button>
+          <button className="btnrf" onClick={() => handleFormatChange("Test")}>Test</button>
+          <button className="btnrf" onClick={() => handleFormatChange("T20")}>T20</button>
         </div>
       )}
 
       {formatSelected && (
-        <div>
-          <button className="btnr" onClick={() => handleGenderChange("Male")}>Men</button>
-          <button className="btnr" onClick={() => handleGenderChange("Female")}>Women</button>
+        <div className="genderbtn">
+          <button className="btnrg" onClick={() => handleGenderChange("Male")}>Men</button>
+          <button className="btnrg" onClick={() => handleGenderChange("Female")}>Women</button>
         </div>
       )}
 
       <div className="mainrank">
+        <tr>
+          <th className="tab1">Position</th>
+          <th className="tab2">Series</th>
+          <th className="tab3">Name</th>
+          <th className="tab4">Image</th>
+          <th className="tab5">Country</th>
+          <th className="tab6">Gender</th>
+          <th className="tab7">Rating</th>
+        </tr>
         {players.map((player, index) => {
           return (
             <ul key={index} className="ranktable">
-              <li className="">{player.position}</li>
-              <li className="">{player.series}</li>
-              <li className="">{player.player.name}</li>
-              <li className="">
+              <li className="rankingt1">{player.position}</li>
+              <li className="rankingt2">{player.series}</li>
+              <li className="rankingt3">{player.player.name}</li>
+              <li className="rankingt4">
                 <img src={player.player.image} alt="" />
               </li>
-              <li>Country: {player.player.country}</li>
-              <li>Gender: {player.player.gender}</li>
+              <li className="rankingt5">{player.player.country}</li>
+              <li className="rankingt6">{player.player.gender}</li>
+              <li className="rankingt7">{player.rating}</li>
             </ul>
           );
         })}
