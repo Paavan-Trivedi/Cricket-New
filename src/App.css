@@ -189,7 +189,6 @@ body {
 
 .logout:hover{
   background: #aa076b;
-  
 }
 
 .hdbtn {
@@ -217,7 +216,6 @@ body {
   border-radius: 10px;
   margin-left: 30px;
   cursor: pointer;
-
 }
 
 .players ul li img {
@@ -292,11 +290,12 @@ body {
   padding: 10px 20px;
   /* background-color: rgb(128, 12, 93); */
   /* background-color: #49063f; */
-  background-image: radial-gradient(circle farthest-corner at 10% 20%,
-      /* rgba(100, 43, 115, 1) 0%, 
-  rgba(4, 0, 4, 1) 90%); */
-      #30305ca6 50%,
-      rgb(25, 74, 101) 90%);
+  /* background-image: radial-gradient(circle farthest-corner at 10% 20%,
+  #30305ca6 50%,
+  rgb(25, 74, 101) 90%);  */
+  /* rgba(100, 43, 115, 1) 0%, 
+rgba(4, 0, 4, 1) 90%); */
+      background-image: linear-gradient(rgba(100, 43, 115, 1) 0%, #30305ca6 50%);
   /* box-shadow: 1px 10px 20px 1px rgb(26, 25, 25); */
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
 
@@ -396,6 +395,17 @@ body {
   /* background-color: #49063f; */
   overflow-y: auto;
   height: 500px;
+}
+
+.mainrank ul{
+  list-style: none;
+display: flex;
+}
+.mainrank li{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
