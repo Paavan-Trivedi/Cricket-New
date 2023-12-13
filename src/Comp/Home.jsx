@@ -116,7 +116,7 @@ export default function Home() {
                   <NavLink className="Indiateam" to={team.link} key={index}>
                     <div className="card-box">
                       <img
-                        style={{ width: "200px", height: "120px" }}
+                        style={{}}
                         src={team.image}
                         alt=""
                       />
