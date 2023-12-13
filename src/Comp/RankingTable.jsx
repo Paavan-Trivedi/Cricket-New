@@ -21,7 +21,7 @@ const RankingTable = () => {
   };
 
   useEffect(() => {
-    getdata("http://192.168.29.84:8000/app/icc");
+    getdata("http://192.168.29.84:8000/app/icc_batting");
   }, []);
 
   const handleCategoryChange = (category) => {
@@ -64,7 +64,7 @@ const RankingTable = () => {
     <div className="ranking-table">
       <h2>Ranking Table</h2>
       <div className="categorybtn">
-        <button className="btnr" onClick={() => handleCategoryChange("Batting")} >Batting</button>
+        <button className="btnr" onClick={() => handleCategoryChange("Batting")}>Batting</button>
         <button className="btnr" onClick={() => handleCategoryChange("Bowling")}>Bowling</button>
         <button className="allrounder-button" onClick={() => handleCategoryChange("AllRounder")}>All Rounder</button>
       </div>
@@ -85,15 +85,15 @@ const RankingTable = () => {
       )}
 
       <div className="mainrank">
-        <tr>
-          <th className="tab1">Position</th>
-          <th className="tab2">Series</th>
-          <th className="tab3">Name</th>
-          <th className="tab4">Image</th>
-          <th className="tab5">Country</th>
-          <th className="tab6">Gender</th>
-          <th className="tab7">Rating</th>
-        </tr>
+        <ul>
+          <li className="tab1">Position</li>
+          <li className="tab2">Series</li>
+          <li className="tab3">Name</li>
+          <li className="tab4">Image</li>
+          <li className="tab5">Country</li>
+          <li className="tab6">Gender</li>
+          <li className="tab7">Rating</li>
+        </ul>
         {players.map((player, index) => {
           return (
             <ul key={index} className="ranktable">
