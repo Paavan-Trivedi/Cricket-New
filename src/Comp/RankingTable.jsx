@@ -64,7 +64,7 @@ const RankingTable = () => {
     <div className="ranking-table">
       <h2>Ranking Table</h2>
       <div className="categorybtn">
-        <button className="btnr" onClick={() => handleCategoryChange("Batting")}>Batting</button>
+        <button className="btnr" onClick={() => handleCategoryChange("Batting")} >Batting</button>
         <button className="btnr" onClick={() => handleCategoryChange("Bowling")}>Bowling</button>
         <button className="allrounder-button" onClick={() => handleCategoryChange("AllRounder")}>All Rounder</button>
       </div>
