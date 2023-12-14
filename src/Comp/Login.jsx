@@ -15,14 +15,15 @@ export default function Login() {
     setName,
     password,
     setPassword,
-    register,
-    login,
   } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = () => {
     if (name == '' || password == "") {
       toast.error("Pls Fill Data")
+    }
+    else if(localStorage.getItem("name") !== name){
+      toast.error("Pls Register First")
     }else{
       localStorage.setItem("login", true);
       navigate("/");

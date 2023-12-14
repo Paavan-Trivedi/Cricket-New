@@ -29,6 +29,7 @@ export default function Signup() {
         }
       )
       .then(() => {
+        localStorage.setItem("name", name);
         setRegister(true);
         navigate("/login");
       })
