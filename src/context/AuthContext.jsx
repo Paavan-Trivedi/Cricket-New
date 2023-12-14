@@ -10,8 +10,8 @@ export const AuthProvider = ({ children }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [username, setusername] = useState("");
   const [password, setPassword] = useState("");
-
-
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [token, setToken] = useState("");
 
   return (
     <AuthContext.Provider
@@ -22,6 +22,10 @@ export const AuthProvider = ({ children }) => {
         setusername,
         password,
         setPassword,
+        loggedIn,
+        setLoggedIn,
+        token,
+        setToken,
       }}
     >
       {children}

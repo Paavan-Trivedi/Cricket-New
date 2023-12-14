@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const Protectedroute = (props) => {
-  const { Component } = props;
+  const { Cmp } = props;
+  const { loggedin } = useAuth();
   const navigate = useNavigate();
   
   useEffect(() => {
-    const data = localStorage.getItem("login");
-    if (!data) {
+    if (!loggedin) {
       navigate("/login");
     } 
   });
 
   return (
     <div>
-      <Component />
+      <Cmp />
     </div>
   );
 };

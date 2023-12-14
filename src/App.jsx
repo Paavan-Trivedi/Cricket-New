@@ -16,6 +16,7 @@ import WestIndies, { WeFemale, WeMale } from "./Comp/Country/WestIndies";
 import Zimbabwe, { ZiFemale, ZiMale } from "./Comp/Country/Zimbabwe";
 // import Protectedroute from "./Comp/ProtectedRoute";
 import { useState } from "react";
+import Protectedroute from "./Comp/Protectedroute";
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home onLogout={handleLogout} />} />"
+        <Route path="/" element={<Protectedroute Cmp={Home} />} />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/india" element={<India />} />
