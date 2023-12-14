@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import { toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import axios from "axios";
+import { useAuth } from "../context/AuthContext";
 
-export default function Navbar({ setLoggedIn, setToken, token }) {
+export default function Navbar() {
   const navigate = useNavigate();
-
+  const { token, setToken, setLoggedIn } = useAuth();
 
   const logoutHandler = () => {
     axios
@@ -15,6 +16,7 @@ export default function Navbar({ setLoggedIn, setToken, token }) {
       .then(() => {
         setToken('');
         setLoggedIn(false);
+        toast.success('Logout Successfully');
         navigate("/login")
       })
       .catch((error) => {

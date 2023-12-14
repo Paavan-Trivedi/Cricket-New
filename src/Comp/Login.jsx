@@ -26,9 +26,9 @@ export default function Login({ onLogin }) {
         password: password,
       })
       .then((response) => {
-        navigate("/")
         if (response.data && response.data.token) {
           onLogin(response.data);
+          navigate("/")
           toast.success("login Successfully")
         }
       })
