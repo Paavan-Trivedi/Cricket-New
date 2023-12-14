@@ -3,38 +3,29 @@ import "./Signup.css";
 import axios from "axios";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 export default function Signup() {
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [register, setRegister] = useState(false);
   const navigate = useNavigate();
   
   const submitHandler = () => {
     axios
-      .post(
-        "http://192.168.29.84:8000/accounts/api/register/",
-        {
-          username: name,
-          email: email,
-          password: password,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        }
-      )
-      .then(() => {
-        localStorage.setItem("name", name);
-        setRegister(true);
-        navigate("/login");
+      .post("http://192.168.29.84:8000/accounts/api/register/", {
+        username: username,
+        email: email,
+        password: password,
+      })
+      .then((response) => {
+        console.log(response.data);
+        navigate("/login")
+        toast.success("Register Successfully")
       })
       .catch((error) => {
-        console.error("Error occurred:", error);
+        console.error("Registration failed:", error);
       });
   };
 
@@ -48,9 +39,9 @@ export default function Signup() {
           type="text"
           placeholder="Name"
           id="username"
-          value={name}
+          value={username}
           required
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)}
         />
 
         <label htmlFor="email">Email</label>

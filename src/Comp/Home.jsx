@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 import RankingTable from "./RankingTable";
 
-export default function Home() {
+export default function Home({onLogout}) {
   const [search, setSearch] = useState("");
   const [teams, setTeams] = useState([
     {
@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <>
       <div className="main_body">
-        <Navbar />
+        <Navbar onLogout={onLogout} />
         <input
           type="search"
           name="search"
