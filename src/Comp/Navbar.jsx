@@ -12,6 +12,7 @@ export default function Navbar() {
 
   const logoutHandler = () => {
     localStorage.removeItem("login");
+    localStorage.removeItem("name");
     navigate("/login");
     toast.success("Logout Successfully");
   };
