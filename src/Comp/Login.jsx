@@ -4,31 +4,37 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-hot-toast';
+import axios from 'axios';
 import "./Login.css"
 
 
-export default function Login() {
+export default function Login({ onLogin }) {
   const {
     showPassword,
     setShowPassword,
-    name,
-    setName,
+    username,
+    setusername,
     password,
     setPassword,
   } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    if (name == '' || password == "") {
-      toast.error("Pls Fill Data")
-    }
-    else if(localStorage.getItem("name") !== name){
-      toast.error("Pls Register First")
-    }else{
-      localStorage.setItem("login", true);
-      navigate("/");
-      toast.success("Login Successfully");
-    }
+    axios
+      .post('http://192.168.29.84:8000/accounts/api/login/', {
+        username: username,
+        password: password,
+      })
+      .then((response) => {
+        navigate("/")
+        if (response.data && response.data.token) {
+          onLogin(response.data);
+          toast.success("login Successfully")
+        }
+      })
+      .catch((error) => {
+        console.error('Login failed:', error);
+      });
   };
 
   return (
@@ -42,8 +48,8 @@ export default function Login() {
           placeholder="Name"
           id="username"
           required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={username}
+          onChange={(e) => setusername(e.target.value)}
         />
 
         <label htmlFor="password">Password</label>
@@ -63,13 +69,13 @@ export default function Login() {
           )}
         </span>
 
-        <button type="submit" className="login-button" onClick={() =>handleLogin()}>
+        <button type="submit" className="login-button" onClick={() => handleLogin()}>
           Log In
         </button>
         <br />
         <br />
         <p>
-          not have an account?{' '}
+          not have an account?
           <NavLink to={'/signup'} className="link">
             Signup
           </NavLink>
