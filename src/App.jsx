@@ -14,7 +14,6 @@ import Pakistan, { PaFemale, PaMale } from "./Comp/Country/Pakistan";
 import SouthAfrica, { SoFemale, SoMale } from "./Comp/Country/SouthAfrica";
 import WestIndies, { WeFemale, WeMale } from "./Comp/Country/WestIndies";
 import Zimbabwe, { ZiFemale, ZiMale } from "./Comp/Country/Zimbabwe";
-// import Protectedroute from "./Comp/ProtectedRoute";
 import { useState } from "react";
 import Protectedroute from "./Comp/Protectedroute";
 
@@ -28,10 +27,7 @@ function App() {
     setLoggedIn(true);
   };
 
-  const handleLogout = () => {
-    setUserData(null);
-    setLoggedIn(false);
-  };
+
   return (
     <>
       <Routes>

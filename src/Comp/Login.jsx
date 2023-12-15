@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
@@ -29,6 +29,7 @@ export default function Login({ onLogin }) {
         if (response.data && response.data.token) {
           onLogin(response.data);
           navigate("/")
+          localStorage.setItem("login", true)
           toast.success("login Successfully")
         }
       })
