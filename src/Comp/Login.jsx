@@ -8,7 +8,7 @@ import axios from 'axios';
 import "./Login.css"
 
 
-export default function Login({ onLogin }) {
+export default function Login() {
   const {
     showPassword,
     setShowPassword,
@@ -20,6 +20,9 @@ export default function Login({ onLogin }) {
   const navigate = useNavigate();
 
   const handleLogin = () => {
+    if (username == "" || password == "") {
+      toast.error("Please Fill Data")
+    }
     axios
       .post('http://192.168.29.84:8000/accounts/api/login/', {
         username: username,
@@ -27,14 +30,13 @@ export default function Login({ onLogin }) {
       })
       .then((response) => {
         if (response.data && response.data.token) {
-          onLogin(response.data);
           navigate("/")
           localStorage.setItem("login", true)
           toast.success("login Successfully")
         }
       })
       .catch((error) => {
-        console.error('Login failed:', error);
+        toast.error("Invalid Login Details");
       });
   };
 
