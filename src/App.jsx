@@ -14,25 +14,16 @@ import Pakistan, { PaFemale, PaMale } from "./Comp/Country/Pakistan";
 import SouthAfrica, { SoFemale, SoMale } from "./Comp/Country/SouthAfrica";
 import WestIndies, { WeFemale, WeMale } from "./Comp/Country/WestIndies";
 import Zimbabwe, { ZiFemale, ZiMale } from "./Comp/Country/Zimbabwe";
-import { useState } from "react";
 import Protectedroute from "./Comp/Protectedroute";
 
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [userData, setUserData] = useState(null);
-
-  const handleLogin = (userData) => {
-    setUserData(userData);
-    setLoggedIn(true);
-  };
-
 
   return (
     <>
       <Routes>
         <Route path="/" element={<Protectedroute Cmp={Home} />} />
-        <Route path="/login" element={<Login onLogin={handleLogin} />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/india" element={<India />} />
         <Route path="/india/male" element={<InMale />} />
