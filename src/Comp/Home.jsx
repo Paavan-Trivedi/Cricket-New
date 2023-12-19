@@ -1,90 +1,96 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-
+import { useState } from "react";
+import { useSearchParams , useNavigate} from "react-router-dom";
 import Navbar from "./Navbar";
 import RankingTable from "./RankingTable";
 
 export default function Home({onLogout}) {
+  const navigate = useNavigate();
+  const [searchParams,setSearchParams] = useSearchParams();
   const [search, setSearch] = useState("");
   const [teams, setTeams] = useState([
     {
       name: "INDIA",
+      link: "india-6",
       image: "India.png",
       description:
         "The Indian cricket team, a formidable force in international cricket, boasts a rich history, diverse talent, and unwavering passion.",
-      link: "india",
     },
     {
       name: "New Zealand",
+      link: "new-zealand-5",
       image: "New Zealand.png",
       description:
         "The New Zealand cricket team, known as the Blackcaps, exhibits skill, resilience, and sportsmanship globally.",
-      link: "Newzealand",
     },
     {
       name: "Australia",
+      link: "australia-2",
       image: "Australia.jpg",
       description:
         "The Australian cricket team, embodying grit and skill, dominates the world stage with a storied legacy.",
-      link: "Australia",
     },
     {
       name: "England",
+      link: "england-1",
       image: "England.jpg",
       description:
         "The England cricket team, a bastion of tradition and skill, epitomizes cricket excellence on the global stage.",
-      link: "England",
     },
     {
       name: "South Africa",
+      link: "south-africa-3",
       image: "South Africa.jpg",
       description:
         "The South Africa cricket team, Proteas, blends talent, resilience, and diversity, symbolizing cricket prowess internationally.",
-      link: "SouthAfrica",
     },
     {
       name: "West Indies",
+      link: "west-indies-4",
       image: "West Indies.jpg",
       description:
         "The West Indies cricket team, a vibrant blend of flair and power, has a legendary cricketing legacy.",
-      link: "WestIndies",
     },
     {
       name: "Ireland",
+      link: "ireland-29",
       image: "Ireland.png",
       description:
         "The Ireland cricket team, emerging with passion and determination, contributes to cricket global landscape impressively.",
-      link: "Ireland",
     },
     {
       name: "Afghanistan",
+      link: "afghanistan-40",
       image: "Afghanistan.png",
       description:
         "The Afghanistan cricket team, a rising force, embodies resilience and talent, making a mark on the international stage.",
-      link: "Afghanistan",
     },
     {
       name: "Bangladesh",
+      link: "bangladesh-25",
       image: "Bangladesh.png",
       description:
         "The Bangladesh cricket team, a symbol of resilience and growing prowess, continues to make strides globally.",
-      link: "Bangladesh",
     },
     {
       name: "Zimbabwe",
+      link: "zimbabwe-9",
       image: "Zimbabwe.png",
       description:
         "The Zimbabwe cricket team, displaying resilience and spirit, contributes to the cricketing world with determination and talent.",
-      link: "Zimbabwe",
     },
     {
       name: "Pakistan",
+      link: "pakistan-7",
       image: "Pakistan.png",
       description:
         "The Pakistan cricket team, a powerhouse of skill and passion, commands global respect with its historic triumphs.",
-      link: "Pakistan",
     },
   ]);
+
+  const cardCLick = (countryName) => {
+    setSearchParams("country",countryName);
+    navigate(`/${countryName}`);
+  }
 
   return (
     <>
@@ -113,8 +119,8 @@ export default function Home({onLogout}) {
                   }
                 })
                 .map((team, index) => (
-                  <NavLink className="Indiateam" to={team.link} key={index}>
-                    <div className="card-box">
+                  <button className="card-box" key={index} onClick={() => cardCLick(team.link)}>
+                    <div>
                       <img
                         style={{}}
                         src={team.image}
@@ -125,7 +131,7 @@ export default function Home({onLogout}) {
                         <p>{team.description}</p>
                       </div>
                     </div>
-                  </NavLink>
+                  </button>
                 ))}
             </div>
           </div>
