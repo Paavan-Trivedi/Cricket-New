@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams, useSearchParams } from "react-router-dom";
 
-export default function Afghanistan() {
+export default function CountryPlayer() {
   const [search, setSearch] = useState("");
   const [Players, setPlayers] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { country } = useParams();
 
   const getUsers = () => {
     axios
-      .get("http://192.168.29.84:8000/app/playerapi/?player_country=afghanistan-40&player_gender=&player_playing_role=")
+      .get(
+        `http://192.168.29.84:8000/app/playerapi/?player_country=${country}&player_gender=&player_playing_role=`
+      )
       .then((response) => {
         setPlayers(response.data || []);
       })
@@ -19,6 +23,19 @@ export default function Afghanistan() {
   useEffect(() => {
     getUsers();
   }, []);
+
+  const CpHandler = () => {
+    getUsers();
+  };
+
+  const MaleHandle = (Male) => {
+    setSearchParams("gender", Male);
+    getUsers(Male);
+  };
+
+  const FemaleHandle = () => {
+    getUsers();
+  };
 
   return (
     <>
@@ -33,15 +50,20 @@ export default function Afghanistan() {
           }}
         />
       </div>
-      <NavLink to={"/Afghanistan"}>
-        <button className="Btn">Men</button>
-      </NavLink>
+
+      <button className="Btn" onClick={() => CpHandler()}>
+        All
+      </button>
+      <button className="Btn" onClick={() => MaleHandle("Male")}>
+        Men
+      </button>
+      <button className="Btn" onClick={() => FemaleHandle("female")}>
+        Women
+      </button>
 
       <div className="players">
         {Players.filter((val) => {
-          if (
-            val.player_name.toLowerCase().includes(search.toLowerCase())
-          ) {
+          if (val.player_name.toLowerCase().includes(search.toLowerCase())) {
             return val;
           }
         }).map((player) => {
